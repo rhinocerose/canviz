@@ -1,0 +1,66 @@
+---
+
+identifier: temperature_diode
+  display_name: Diode Temperature
+  frame_id: 406768872
+  subsystem: temperature
+identifier: temperature_contactor
+  display_name: Contactor Temperature
+  frame_id: 406768872
+  subsystem: temperature
+identifier: temperature_min_mono
+  display_name: Min Temperature
+  frame_id: 406768872
+  subsystem: temperature
+identifier: temperature_max_mono
+  display_name: Max Temperature
+  frame_id: 406768872
+  subsystem: temperature
+identifier: temperature_diode
+  display_name: Diode Temperature
+  frame_id: 406768872
+  subsystem: temperature
+identifier: voltage_max_mono
+  display_name: Max Voltage
+  frame_id: 406768872
+  subsystem: voltage
+identifier: voltage_min_mono
+  display_name: Min Voltage
+  frame_id: 406768872
+  subsystem: voltage
+identifier: power_instant
+  display_name: Instant Power
+  frame_id: 406899944
+  subsystem: power
+identifier: power_cumulative
+  display_name: Cumulative Power
+  frame_id: 406899944
+  subsystem: power
+identifier: current_hall
+  display_name: Hall Current
+  frame_id: 406899944
+  subsystem: current
+identifier: current_shunt
+  display_name: Shunt Current
+  frame_id: 406899944
+  subsystem: current
+identifier: state_current_num
+  display_name: Current State Number
+  frame_id: 406834408
+  subsystem: state
+identifier: soc
+  display_name: State of Charge
+  frame_id: 406834408
+  subsystem: voltage
+identifier: voltage_stack
+  display_name: Stack Voltage
+  frame_id: 406834408
+  subsystem: voltage
+identifier: current_system
+  display_name: System Current
+  frame_id: 406834408
+  subsystem: current
+identifier: voltage_supply
+  display_name: Voltage Supply
+  frame_id: 406637800
+  subsystem: voltage

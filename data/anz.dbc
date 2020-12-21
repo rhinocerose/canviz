@@ -1,0 +1,81 @@
+VERSION ""
+BA_ "SingleFrame" BO_ 2364539904 0;
+
+NS_ :
+	BA_
+	BA_DEF_
+	BA_DEF_DEF_
+	BA_DEF_DEF_REL_
+	BA_DEF_REL_
+	BA_DEF_SGTYPE_
+	BA_REL_
+	BA_SGTYPE_
+	BO_TX_BU_
+	BU_BO_REL_
+	BU_EV_REL_
+	BU_SG_REL_
+	CAT_
+	CAT_DEF_
+	CM_
+	ENVVAR_DATA_
+	EV_DATA_
+	FILTER
+	NS_DESC_
+	SGTYPE_
+	SGTYPE_VAL_
+	SG_MUL_VAL_
+	SIGTYPE_VALTYPE_
+	SIG_GROUP_
+	SIG_TYPE_REF_
+	SIG_VALTYPE_
+	VAL_
+	VAL_TABLE_
+
+BS_:
+
+BU_: MASTER SLAVE
+
+BO_ 406768872 TEMP_VOLTAGE_FRAME: 8 MASTER
+    SG_ temperature_diode : 0|8@1+ (1,-40) [-40|215] "Celcius" SLAVE
+    SG_ voltage_max_mono : 40|16@0+ (0.001,0) [0|0] "Volts" SLAVE
+    SG_ voltage_min_mono : 24|16@0+ (0.001,0) [0|0] "Volts" SLAVE
+    SG_ temperature_contactor : 40|8@1+ (1,-40) [-40|215] "Celcius" SLAVE
+    SG_ temperature_max_mono : 48|8@1+ (1,-40) [-40|215] "Celcius" SLAVE
+    SG_ temperature_min_mono : 56|8@1+ (1,-40) [-40|215] "Celcius" SLAVE
+
+BO_ 406899944 POWER_CURRENT: 8 MASTER
+    SG_ power_instant : 0|16@0+ (0.1,-1600) [0|0] "Watt-Hours" SLAVE
+    SG_ power_cumulative : 48|16@0+ (0.1,-1600) [0|0] "Watt-Hours" SLAVE
+    SG_ current_hall : 16|16@0+ (0.1,-1600) [0|0] "Amps" SLAVE
+    SG_ current_shunt : 0|16@0+ (0.1,-1600) [0|0] "Amps" SLAVE
+
+BO_ 406834408 SOC_CURRENT: 8 MASTER
+    SG_ state_current_num : 0|8@1+ (1,0) [0|0] "" SLAVE
+    SG_ soc : 8|8@1+ (1,0) [0|100] "Percent" SLAVE
+    SG_ inputs : 16|8@1+ (1,0) [0|0] "" SLAVE
+    SG_ outputs : 24|8@1+ (1,0) [0|0] "" SLAVE
+    SG_ voltage_stack : 16|16@0+ (0.1,0) [0|0] "Volts" SLAVE
+    SG_ current_system : 0|16@0+ (0.1,-1600) [0|0] "Amps" SLAVE
+
+BO_ 406637800 DEBUG_FRAME: 8 MASTER
+    SG_ debug_frame_id M : 0|8@1+ (1,0) [0|0] "" SLAVE
+    SG_ voltage_hv1 m4 : 8|16@1+ (1,0) [0|0] "Volts" SLAVE
+    SG_ voltage_hv2 m4 : 24|16@1+ (1,0) [0|0] "Volts" SLAVE
+    SG_ voltage_supply m4 : 40|16@1+ (1,0) [0|0] "Volts" SLAVE
+
+BO_ 406113512 RAW_FRAME: 8 MASTER
+    SG_ raw_frameid M : 0|8@1+ (1,0) [0|0] "" SLAVE
+    SG_ raw_soc m2 : 56|8@1+ (1,0) [0|100] "Percent" SLAVE
+    SG_ raw_state_present_num m1 : 8|8@1+ (1,0) [0|0] "0" MASTER
+    SG_ raw_state_previous_num m1 : 16|8@1+ (1,0) [0|0] "" MASTER
+    SG_ raw_state_historic_num m1 : 24|8@1+ (1,0) [0|0] "" MASTER
+    SG_ raw_temperature_system m1 : 40|8@1+ (1,-40) [0|0] "Celcius" MASTER
+    SG_ raw_state_error_message m1 : 32|8@1+ (1,0) [0|0] "" MASTER
+    SG_ raw_temperature_diode m1 : 48|8@1+ (1,-40) [0|0] "Celcius" MASTER
+    SG_ raw_temperature_contactor m1 : 56|8@1+ (1,-40) [0|0] "Celcius" MASTER
+    SG_ raw_current_system m2 : 8|16@1+ (0.1,-1600) [0|0] "Amps" SLAVE
+    SG_ raw_current_hall m2 : 24|16@1+ (0.1,-1600) [0|0] "Amps" SLAVE
+    SG_ raw_current_shunt m2 : 40|16@1+ (0.1,-1600) [0|0] "Amps" SLAVE
+
+ CM_ SG_ 406768872 Diode_Temp "Diode temperature";
+ BA_ "SPN" SG_ 406768872 Diode_Temp 190;

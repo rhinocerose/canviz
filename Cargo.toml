@@ -1,0 +1,77 @@
+[package]
+name = "canviz"
+version = "0.1.0"
+authors = ["rhinocerose <ashar.k.latif@gmail.com>"]
+edition = "2018"
+
+[dependencies]
+canparse = "0.1"
+chrono = { version = "0.4", features = ["serde"] }
+config_struct = "0.5.0"
+serde_json = "1.0"
+serde_yaml = "0.8"
+serde = "1.0"
+serde_derive = "1.0"
+strum = "0.17.1"
+strum_macros = "0.17.1"
+toml = "0.5"
+lazy_static = "1.4.0"
+regex = "1.4.0"
+num-traits = "0.2"
+num-derive = "0.2"
+
+[dependencies.nom]
+version = "5.1"
+
+# [dependencies.serde]
+# optional = true
+# version = "1.0"
+
+# [dependencies.serde_derive]
+# optional = true
+# version = "1.0"
+
+[dependencies.ansi_term]
+version = "0.12"
+
+[dependencies.anyhow]
+version = "1.0"
+
+[dependencies.can-dbc]
+version = "3.0"
+
+[dependencies.futures]
+features = ["compat"]
+version = "0.3"
+
+[dependencies.futures-timer]
+version = "3.0"
+
+[dependencies.futures-util]
+features = ["compat"]
+version = "0.3"
+
+[dependencies.pretty-hex]
+version = "0.2"
+
+[dependencies.rand]
+version = "0.7"
+
+[dependencies.rand_core]
+version = "0.5"
+
+[dependencies.socketcan]
+version = "1.7"
+
+[dependencies.structopt]
+version = "0.3"
+
+[dependencies.tokio]
+features = ["full"]
+version = "0.2"
+
+[dependencies.tokio-socketcan]
+version = "0.2"
+
+# [features]
+# with-serde = ["serde", "serde_derive"]
