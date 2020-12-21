@@ -64,7 +64,6 @@ BO_ 406637800 DEBUG_FRAME: 8 MASTER
 
 BO_ 406113512 RAW_FRAME: 8 MASTER
     SG_ raw_frameid M : 0|8@1+ (1,0) [0|7] "" SLAVE
-    SG_ raw_soc m2 : 56|8@1+ (1,0) [0|100] "Percent" SLAVE
     SG_ raw_state_present_num m1 : 8|8@1+ (1,0) [0|7] "STATE" SLAVE
     SG_ raw_state_previous_num m1 : 16|8@1+ (1,0) [0|7] "STATE" SLAVE
     SG_ raw_state_historic_num m1 : 24|8@1+ (1,0) [0|7] "STATE" SLAVE
@@ -75,6 +74,7 @@ BO_ 406113512 RAW_FRAME: 8 MASTER
     SG_ raw_current_system m2 : 8|16@0+ (0.1,-1600) [-1600|4953.5] "Amps" SLAVE
     SG_ raw_current_hall m2 : 24|16@0+ (0.1,-1600) [-1600|4953.5] "Amps" SLAVE
     SG_ raw_current_shunt m2 : 40|16@0+ (0.1,-1600) [-1600|4953.5] "Amps" SLAVE
+    SG_ raw_soc m2 : 56|8@1+ (1,0) [0|100] "Percent" SLAVE
     SG_ raw_k_value m3 : 8|16@0+ (1,0) [0|65535] "" SLAVE
     SG_ raw_voltage_inverter m3 : 24|16@0+ (0.1,0) [0|6553.5] "Volts" SLAVE
     SG_ raw_voltage_supply m3 : 40|16@0+ (0.1,0) [0|6553.5] "Volts" SLAVE
@@ -125,6 +125,46 @@ BO_ 405851368 MONOBLOCK_VOLTAGE_FRAMES: 8 MASTER
     SG_ raw_mb38_voltage m13 : 16|16@0+ (0.001,0) [0|6553.5] "Volts" SLAVE
 
 BO_ 405916904 MONOBLOCK_TEMPERATURE_FRAMES: 8 MASTER
+    SG_ raw_mb_temp_frameid M : 0|8@1+ (1,0) [0|12] "" SLAVE
+    SG_ raw_mb1_voltage m1 : 16|8@1+ (1,-40) [-40|215] "Celcius" SLAVE
+    SG_ raw_mb2_voltage m1 : 24|8@1+ (1,-40) [-40|215] "Celcius" SLAVE
+    SG_ raw_mb3_voltage m1 : 32|8@1+ (1,-40) [-40|215] "Celcius" SLAVE
+    SG_ raw_mb4_voltage m1 : 40|8@1+ (1,-40) [-40|215] "Celcius" SLAVE
+    SG_ raw_mb5_voltage m1 : 48|8@1+ (1,-40) [-40|215] "Celcius" SLAVE
+    SG_ raw_mb6_voltage m1 : 56|8@1+ (1,-40) [-40|215] "Celcius" SLAVE
+    SG_ raw_mb7_voltage m2 : 16|8@1+ (1,-40) [-40|215] "Celcius" SLAVE
+    SG_ raw_mb8_voltage m2 : 24|8@1+ (1,-40) [-40|215] "Celcius" SLAVE
+    SG_ raw_mb9_voltage m2 : 32|8@1+ (1,-40) [-40|215] "Celcius" SLAVE
+    SG_ raw_mb10_voltage m2 : 40|8@1+ (1,-40) [-40|215] "Celcius" SLAVE
+    SG_ raw_mb11_voltage m2 : 48|8@1+ (1,-40) [-40|215] "Celcius" SLAVE
+    SG_ raw_mb12_voltage m2 : 56|8@1+ (1,-40) [-40|215] "Celcius" SLAVE    
+    SG_ raw_mb13_voltage m3 : 16|8@1+ (1,-40) [-40|215] "Celcius" SLAVE
+    SG_ raw_mb14_voltage m3 : 24|8@1+ (1,-40) [-40|215] "Celcius" SLAVE
+    SG_ raw_mb15_voltage m3 : 32|8@1+ (1,-40) [-40|215] "Celcius" SLAVE
+    SG_ raw_mb16_voltage m3 : 40|8@1+ (1,-40) [-40|215] "Celcius" SLAVE
+    SG_ raw_mb17_voltage m3 : 48|8@1+ (1,-40) [-40|215] "Celcius" SLAVE
+    SG_ raw_mb18_voltage m3 : 56|8@1+ (1,-40) [-40|215] "Celcius" SLAVE
+    SG_ raw_mb19_voltage m4 : 16|8@1+ (1,-40) [-40|215] "Celcius" SLAVE
+    SG_ raw_mb20_voltage m4 : 24|8@1+ (1,-40) [-40|215] "Celcius" SLAVE
+    SG_ raw_mb21_voltage m4 : 32|8@1+ (1,-40) [-40|215] "Celcius" SLAVE
+    SG_ raw_mb22_voltage m4 : 40|8@1+ (1,-40) [-40|215] "Celcius" SLAVE
+    SG_ raw_mb23_voltage m4 : 48|8@1+ (1,-40) [-40|215] "Celcius" SLAVE
+    SG_ raw_mb24_voltage m4 : 56|8@1+ (1,-40) [-40|215] "Celcius" SLAVE
+    SG_ raw_mb25_voltage m5 : 16|8@1+ (1,-40) [-40|215] "Celcius" SLAVE
+    SG_ raw_mb26_voltage m5 : 24|8@1+ (1,-40) [-40|215] "Celcius" SLAVE
+    SG_ raw_mb27_voltage m5 : 32|8@1+ (1,-40) [-40|215] "Celcius" SLAVE
+    SG_ raw_mb28_voltage m5 : 40|8@1+ (1,-40) [-40|215] "Celcius" SLAVE
+    SG_ raw_mb29_voltage m5 : 48|8@1+ (1,-40) [-40|215] "Celcius" SLAVE
+    SG_ raw_mb30_voltage m5 : 56|8@1+ (1,-40) [-40|215] "Celcius" SLAVE
+    SG_ raw_mb31_voltage m6 : 16|8@1+ (1,-40) [-40|215] "Celcius" SLAVE
+    SG_ raw_mb32_voltage m6 : 24|8@1+ (1,-40) [-40|215] "Celcius" SLAVE
+    SG_ raw_mb33_voltage m6 : 32|8@1+ (1,-40) [-40|215] "Celcius" SLAVE
+    SG_ raw_mb34_voltage m6 : 40|8@1+ (1,-40) [-40|215] "Celcius" SLAVE
+    SG_ raw_mb35_voltage m6 : 48|8@1+ (1,-40) [-40|215] "Celcius" SLAVE
+    SG_ raw_mb36_voltage m6 : 56|8@1+ (1,-40) [-40|215] "Celcius" SLAVE
+    SG_ raw_mb37_voltage m7 : 16|8@1+ (1,-40) [-40|215] "Celcius" SLAVE
+    SG_ raw_mb38_voltage m7 : 24|8@1+ (1,-40) [-40|215] "Celcius" SLAVE
+    
 BO_ 406375656 STATE_MACHINE_DEBUG_FRAMES: 8 MASTER
 BO_ 406703336 ERROR_FRAME: 8 MASTER
 
