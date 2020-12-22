@@ -1,0 +1,110 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_OUTPUT_FILESEP	slash	/slash or backslash/
+!_TAG_OUTPUT_MODE	u-ctags	/u-ctags or e-ctags/
+!_TAG_PATTERN_LENGTH_LIMIT	96	/0 for no limit/
+!_TAG_PROGRAM_AUTHOR	Universal Ctags Team	//
+!_TAG_PROGRAM_NAME	Universal Ctags	/Derived from Exuberant Ctags/
+!_TAG_PROGRAM_URL	https://ctags.io/	/official site/
+!_TAG_PROGRAM_VERSION	0.0.0	/86bdb84c/
+Charge	src/configs/systemvalues.rs	/^    Charge,$/;"	e	enum:States
+Charge	src/configs/sysval.rs	/^    Charge,$/;"	e	enum:States
+Discharge	src/configs/systemvalues.rs	/^    Discharge,$/;"	e	enum:States
+Discharge	src/configs/sysval.rs	/^    Discharge,$/;"	e	enum:States
+EOD	src/configs/systemvalues.rs	/^    EOD,$/;"	e	enum:States
+EOD	src/configs/sysval.rs	/^    EOD,$/;"	e	enum:States
+Error	src/configs/systemvalues.rs	/^    Error,$/;"	e	enum:States
+Error	src/configs/sysval.rs	/^    Error,$/;"	e	enum:States
+NodeValue	src/configs/systemvalues.rs	/^impl<'a> NodeValue<'a> {$/;"	c
+NodeValue	src/configs/systemvalues.rs	/^pub struct NodeValue<'a> {$/;"	s
+NodeValue	src/configs/sysval.rs	/^impl<'a> NodeValue<'a> {$/;"	c
+NodeValue	src/configs/sysval.rs	/^pub struct NodeValue<'a> {$/;"	s
+Opt	src/main.rs	/^struct Opt {$/;"	s
+Overview	src/configs/systemvalues.rs	/^impl<'a> Overview<'a> {$/;"	c
+Overview	src/configs/systemvalues.rs	/^pub struct Overview<'a> {$/;"	s
+Overview	src/configs/sysval.rs	/^impl<'a> Overview<'a> {$/;"	c
+Overview	src/configs/sysval.rs	/^pub struct Overview<'a> {$/;"	s
+PreStandby	src/configs/systemvalues.rs	/^    PreStandby,$/;"	e	enum:States
+PreStandby	src/configs/sysval.rs	/^    PreStandby,$/;"	e	enum:States
+Service	src/configs/systemvalues.rs	/^    Service,$/;"	e	enum:States
+Service	src/configs/sysval.rs	/^    Service,$/;"	e	enum:States
+Standby	src/configs/systemvalues.rs	/^    Standby,$/;"	e	enum:States
+Standby	src/configs/sysval.rs	/^    Standby,$/;"	e	enum:States
+States	src/configs/systemvalues.rs	/^enum States {$/;"	g
+States	src/configs/sysval.rs	/^enum States {$/;"	g
+add_node	src/configs/systemvalues.rs	/^    fn add_node($/;"	P	implementation:Overview
+add_node	src/configs/sysval.rs	/^    fn add_node($/;"	P	implementation:Overview
+add_nodes	src/configs/systemvalues.rs	/^    pub fn add_nodes(&mut self, file_as_string: &'a str) {$/;"	P	implementation:Overview
+add_nodes	src/configs/sysval.rs	/^    pub fn add_nodes(&mut self, file_as_string: &'a str) {$/;"	P	implementation:Overview
+can_interface	src/main.rs	/^    can_interface: String,$/;"	m	struct:Opt
+configs	src/main.rs	/^mod configs;$/;"	n
+display_name	src/configs/systemvalues.rs	/^    display_name: &'a str,$/;"	m	struct:NodeValue
+display_name	src/configs/sysval.rs	/^    display_name: &'a str,$/;"	m	struct:NodeValue
+frame_id	src/configs/systemvalues.rs	/^    frame_id: u32,$/;"	m	struct:NodeValue
+frame_id	src/configs/sysval.rs	/^    frame_id: u32,$/;"	m	struct:NodeValue
+frame_id_return_functioning	src/configs/systemvalues.rs	/^    fn frame_id_return_functioning() {$/;"	f	module:tests
+frame_id_return_functioning	src/configs/sysval.rs	/^    fn frame_id_return_functioning() {$/;"	f	module:tests
+frames_since_update	src/configs/systemvalues.rs	/^    frames_since_update: i32,$/;"	m	struct:NodeValue
+frames_since_update	src/configs/sysval.rs	/^    frames_since_update: i32,$/;"	m	struct:NodeValue
+frames_since_updates_functioning	src/configs/systemvalues.rs	/^    fn frames_since_updates_functioning() {$/;"	f	module:tests
+frames_since_updates_functioning	src/configs/sysval.rs	/^    fn frames_since_updates_functioning() {$/;"	f	module:tests
+get_frame_id	src/configs/systemvalues.rs	/^    fn get_frame_id(&self) -> u32 {$/;"	P	implementation:NodeValue
+get_frame_id	src/configs/sysval.rs	/^    fn get_frame_id(&self) -> u32 {$/;"	P	implementation:NodeValue
+get_identifier	src/configs/systemvalues.rs	/^    fn get_identifier(&self) -> &'a str {$/;"	P	implementation:NodeValue
+get_identifier	src/configs/sysval.rs	/^    fn get_identifier(&self) -> &'a str {$/;"	P	implementation:NodeValue
+get_subsystem	src/configs/systemvalues.rs	/^    fn get_subsystem(&self) -> &'a str {$/;"	P	implementation:NodeValue
+get_subsystem	src/configs/sysval.rs	/^    fn get_subsystem(&self) -> &'a str {$/;"	P	implementation:NodeValue
+hash_map	src/configs/systemvalues.rs	/^    pub hash_map: HashMap<&'a str, NodeValue<'a>>,$/;"	m	struct:Overview
+hash_map	src/configs/sysval.rs	/^    pub hash_map: HashMap<&'a str, NodeValue<'a>>,$/;"	m	struct:Overview
+identifier	src/configs/systemvalues.rs	/^    identifier: &'a str,$/;"	m	struct:NodeValue
+identifier	src/configs/sysval.rs	/^    identifier: &'a str,$/;"	m	struct:NodeValue
+increment	src/configs/systemvalues.rs	/^    fn increment(&mut self) {$/;"	P	implementation:Overview
+increment	src/configs/sysval.rs	/^    fn increment(&mut self) {$/;"	P	implementation:Overview
+input	src/main.rs	/^    input: Option<PathBuf>,$/;"	m	struct:Opt
+join	src/configs/systemvalues.rs	/^    fn join(&mut self, values: NodeValue<'a>) {$/;"	P	implementation:Overview
+join	src/configs/sysval.rs	/^    fn join(&mut self, values: NodeValue<'a>) {$/;"	P	implementation:Overview
+last_updated	src/configs/systemvalues.rs	/^    last_updated: DateTime<Local>,$/;"	m	struct:NodeValue
+last_updated	src/configs/sysval.rs	/^    last_updated: DateTime<Local>,$/;"	m	struct:NodeValue
+main	src/main.rs	/^async fn main() -> Result<()> {$/;"	f
+make_map	src/configs/systemvalues.rs	/^    fn make_map() -> Overview<'static> {$/;"	f	module:tests
+make_map	src/configs/sysval.rs	/^    fn make_map() -> Overview<'static> {$/;"	f	module:tests
+make_struct	src/configs/systemvalues.rs	/^    fn make_struct() -> NodeValue<'static> {$/;"	f	module:tests
+make_struct	src/configs/sysval.rs	/^    fn make_struct() -> NodeValue<'static> {$/;"	f	module:tests
+match_frame	src/configs/systemvalues.rs	/^    fn match_frame(&self, frame_id: u32) -> Vec<&'a str> {$/;"	P	implementation:Overview
+match_frame	src/configs/sysval.rs	/^    fn match_frame(&self, frame_id: u32) -> Vec<&'a str> {$/;"	P	implementation:Overview
+match_state	src/configs/systemvalues.rs	/^    fn match_state(&mut self) {$/;"	P	implementation:Overview
+match_state	src/configs/sysval.rs	/^    fn match_state(&mut self) {$/;"	P	implementation:Overview
+new	src/configs/systemvalues.rs	/^    fn new($/;"	P	implementation:NodeValue
+new	src/configs/systemvalues.rs	/^    pub fn new() -> Overview<'a> {$/;"	P	implementation:Overview
+new	src/configs/sysval.rs	/^    fn new($/;"	P	implementation:NodeValue
+new	src/configs/sysval.rs	/^    pub fn new() -> Overview<'a> {$/;"	P	implementation:Overview
+not_updated	src/configs/systemvalues.rs	/^    fn not_updated(&mut self) {$/;"	P	implementation:NodeValue
+not_updated	src/configs/sysval.rs	/^    fn not_updated(&mut self) {$/;"	P	implementation:NodeValue
+parse_frame	src/configs/systemvalues.rs	/^    pub fn parse_frame($/;"	P	implementation:Overview
+parse_frame	src/configs/sysval.rs	/^    pub fn parse_frame($/;"	P	implementation:Overview
+print_dbc_signals	src/main.rs	/^fn print_dbc_signals(signal_lookup: &HashMap<u32, (String, Vec<Signal>, &str)>, frame: &CANFrame/;"	f
+print_info	src/configs/systemvalues.rs	/^    fn print_info(&self) {$/;"	P	implementation:NodeValue
+print_info	src/configs/systemvalues.rs	/^    fn print_info(&self) {$/;"	P	implementation:Overview
+print_info	src/configs/sysval.rs	/^    fn print_info(&self) {$/;"	P	implementation:NodeValue
+print_info	src/configs/sysval.rs	/^    fn print_info(&self) {$/;"	P	implementation:Overview
+read_frame	src/configs/systemvalues.rs	/^    fn read_frame($/;"	P	implementation:Overview
+read_frame	src/configs/sysval.rs	/^    fn read_frame($/;"	P	implementation:Overview
+state	src/configs/systemvalues.rs	/^    state: States,$/;"	m	struct:NodeValue
+state	src/configs/sysval.rs	/^    state: States,$/;"	m	struct:NodeValue
+subsystem	src/configs/systemvalues.rs	/^    subsystem: &'a str,$/;"	m	struct:NodeValue
+subsystem	src/configs/sysval.rs	/^    subsystem: &'a str,$/;"	m	struct:NodeValue
+sysval	src/configs.rs	/^mod sysval;$/;"	n
+tests	src/configs/systemvalues.rs	/^mod tests {$/;"	n
+tests	src/configs/sysval.rs	/^mod tests {$/;"	n
+unit	src/configs/systemvalues.rs	/^    unit: &'a str,$/;"	m	struct:NodeValue
+unit	src/configs/sysval.rs	/^    unit: &'a str,$/;"	m	struct:NodeValue
+update_entry	src/configs/systemvalues.rs	/^    fn update_entry(&mut self, identifier: &'a str, new_entry: f32) {$/;"	P	implementation:Overview
+update_entry	src/configs/sysval.rs	/^    fn update_entry(&mut self, identifier: &'a str, new_entry: f32) {$/;"	P	implementation:Overview
+update_state	src/configs/systemvalues.rs	/^    fn update_state(&mut self) {$/;"	P	implementation:NodeValue
+update_state	src/configs/sysval.rs	/^    fn update_state(&mut self) {$/;"	P	implementation:NodeValue
+update_value	src/configs/systemvalues.rs	/^    fn update_value(&mut self, value: f32) {$/;"	P	implementation:NodeValue
+update_value	src/configs/sysval.rs	/^    fn update_value(&mut self, value: f32) {$/;"	P	implementation:NodeValue
+value	src/configs/systemvalues.rs	/^    value: f32,$/;"	m	struct:NodeValue
+value	src/configs/sysval.rs	/^    value: f32,$/;"	m	struct:NodeValue
+value_updating_functioning	src/configs/systemvalues.rs	/^    fn value_updating_functioning() {$/;"	f	module:tests
+value_updating_functioning	src/configs/sysval.rs	/^    fn value_updating_functioning() {$/;"	f	module:tests

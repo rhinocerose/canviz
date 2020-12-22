@@ -19,7 +19,7 @@ use std::path::PathBuf;
 use structopt::StructOpt;
 use tokio::fs::File;
 use tokio::io::AsyncReadExt;
-use tokio_socketcan;
+// use tokio_socketcan;
 
 #[derive(Debug, StructOpt)]
 #[structopt(
@@ -34,11 +34,16 @@ struct Opt {
     /// Set can interface
     #[structopt(help = "socketcan CAN interface e.g. vcan0")]
     can_interface: String,
+
+    /// Print raw frame information
+    #[structopt(short = "r")]
+    raw_data: bool,
 }
 
 #[tokio::main]
 async fn main() -> Result<()> {
     let opt = Opt::from_args();
+    let raw = opt.raw_data;
     let mut system_values = Overview::new();
 
     let mut socket_rx = tokio_socketcan::CANSocket::open(&opt.can_interface).unwrap();
@@ -60,15 +65,6 @@ async fn main() -> Result<()> {
                 (msg.message_name().clone(), msg.signals().clone(), "memo"),
             );
         }
-
-        // for (key, val) in signal_lookup.iter() {
-        //     let (__1, x2, __2) = val;
-        //     println!("{}", key);
-        //     println!("{:#?}", x2);
-        // }
-        // for com in dbc.comments() {
-        //     println!("{:?}", com);
-        // }
         Some(signal_lookup)
 
     } else {
@@ -80,7 +76,7 @@ async fn main() -> Result<()> {
             Ok(frame) => {
                 if let Some(signal_lookup) = signal_lookup.as_ref() {
                     if ((frame.id() << 16) >> 16) == 0xCCE8 {
-                        print_dbc_signals(signal_lookup, &frame);
+                        print_dbc_signals(signal_lookup, &frame, raw);
                     }
                 }
             }
@@ -93,10 +89,11 @@ async fn main() -> Result<()> {
 }
 
 // Given a CAN Frame, lookup the can signals and print the signal values
-fn print_dbc_signals(signal_lookup: &HashMap<u32, (String, Vec<Signal>, &str)>, frame: &CANFrame) {
+fn print_dbc_signals(signal_lookup: &HashMap<u32, (String, Vec<Signal>, &str)>, frame: &CANFrame, raw_data: bool) {
     let id = frame.id() & !socketcan::EFF_FLAG;
-    let (message_name, signals, comment) = signal_lookup.get(&id).expect("Unknown message id");
-    println!("\n{} {:08x}", Purple.paint(message_name), frame.id());
+    let (message_name, signals, _comment) = signal_lookup.get(&id).expect("Unknown message id");
+    let message_name_s = format!("{:<30}", message_name);
+    println!("\n{} Frame ID: {:08X}", Purple.paint(message_name_s), frame.id());
 
     for signal in signals.iter() {
         let frame_data: [u8; 8] = frame
@@ -117,24 +114,17 @@ fn print_dbc_signals(signal_lookup: &HashMap<u32, (String, Vec<Signal>, &str)>, 
             + *signal.offset() as f32;
 
         let signal_value_s = format!("{:6.2}", signal_value);
+        let signal_name_s = format!("{:<30}", signal.name());
 
-        if *signal.multiplexer_indicator() == MultiplexIndicator::MultiplexedSignal(frame_data[0] as u64) {
+        let muxed: bool = *signal.multiplexer_indicator() == MultiplexIndicator::MultiplexedSignal(frame_data[0] as u64);
+        let plain: bool = *signal.multiplexer_indicator() == MultiplexIndicator::Plain;
+
+        if plain || (raw_data && muxed) {
             println!(
-                "{:<50} → {} {} {}",
-                Green.paint(signal.name()),
+                "{} → {} {}",
+                Green.paint(signal_name_s),
                 Cyan.paint(signal_value_s.clone()),
                 Cyan.paint(signal.unit()),
-                comment,
-            );
-        };
-
-        if *signal.multiplexer_indicator() == MultiplexIndicator::Plain {
-            println!(
-                "{:<50} → {} {} {}",
-                Green.paint(signal.name()),
-                Cyan.paint(signal_value_s.clone()),
-                Cyan.paint(signal.unit()),
-                comment,
             );
         };
     }

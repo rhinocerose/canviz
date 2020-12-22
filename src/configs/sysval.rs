@@ -7,7 +7,7 @@ use regex::Regex;
 use std::collections::HashMap;
 use canparse::pgn::{ParseMessage, PgnLibrary};
 // use can_dbc::ByteOrder;
-use can_dbc::Signal;
+// use can_dbc::Signal;
 use anyhow::{Context, Result};
 use socketcan::CANFrame;
 
