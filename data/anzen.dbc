@@ -51,8 +51,22 @@ BO_ 406899944 POWER_CURRENT: 8 MASTER
 BO_ 406834408 SOC_CURRENT: 8 MASTER
     SG_ state_current_num : 0|8@1+ (1,0) [0|7] "STATE" SLAVE
     SG_ soc : 8|8@1+ (1,0) [0|100] "Percent" SLAVE
-    SG_ inputs : 16|8@1+ (1,0) [0|0] "" SLAVE
-    SG_ outputs : 24|8@1+ (1,0) [0|0] "" SLAVE
+    SG_ input_1 : 16|1@1+ (1,0) [0|0] "" SLAVE
+    SG_ input_2 : 17|1@1+ (1,0) [0|0] "" SLAVE
+    SG_ input_3 : 18|1@1+ (1,0) [0|0] "" SLAVE
+    SG_ input_4 : 19|1@1+ (1,0) [0|0] "" SLAVE
+    SG_ input_5 : 20|1@1+ (1,0) [0|0] "" SLAVE
+    SG_ input_6 : 21|1@1+ (1,0) [0|0] "" SLAVE
+    SG_ input_7 : 22|1@1+ (1,0) [0|0] "" SLAVE
+    SG_ input_8 : 23|1@1+ (1,0) [0|0] "" SLAVE
+    SG_ output_1 : 24|1@1+ (1,0) [0|0] "" SLAVE
+    SG_ output_2 : 25|1@1+ (1,0) [0|0] "" SLAVE
+    SG_ output_3 : 26|1@1+ (1,0) [0|0] "" SLAVE
+    SG_ output_4 : 27|1@1+ (1,0) [0|0] "" SLAVE
+    SG_ output_5 : 28|1@1+ (1,0) [0|0] "" SLAVE
+    SG_ output_6 : 29|1@1+ (1,0) [0|0] "" SLAVE
+    SG_ output_7 : 30|1@1+ (1,0) [0|0] "" SLAVE
+    SG_ output_8 : 31|1@1+ (1,0) [0|0] "" SLAVE
     SG_ voltage_stack : 16|16@0+ (0.1,0) [0|6553.5] "Volts" SLAVE
     SG_ current_system : 0|16@0+ (0.1,-1600) [-1600|4953.5] "Amps" SLAVE
 
@@ -186,8 +200,6 @@ CM_ SG_ 406899944 current_shunt "Shunt current";
 CM_ BO_ 406834408 "SOC Current Frame 183FCCE8";
 CM_ SG_ 406834408 state_current_num "State - current number";
 CM_ SG_ 406834408 soc "SOC";
-CM_ SG_ 406834408 inputs "Inputs";
-CM_ SG_ 406834408 outputs "Outputs";
 CM_ SG_ 406834408 voltage_stack "Stack voltage - HV1";
 CM_ SG_ 406834408 current_system "System Current";
 
