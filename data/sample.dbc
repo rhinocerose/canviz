@@ -180,7 +180,30 @@ BO_ 405916904 MONOBLOCK_TEMPERATURE_FRAMES: 8 MASTER
     SG_ raw_mb38_temp m7 : 24|8@1+ (1,-40) [-40|215] "Celcius" SLAVE
 
 BO_ 406375656 STATE_MACHINE_DEBUG_FRAMES: 8 MASTER
+
 BO_ 406703336 ERROR_FRAME: 8 MASTER
+    SG_ raw_errorid M : 0|8@1+ (1,0) [0|0] "" SLAVE
+    SG_ critical_feed_charge_overcurrent m1 : 16|1@1+ (1,0) [0|0] "" SLAVE
+    SG_ critical_slow_charge_overcurrent m1 : 17|1@1+ (1,0) [0|0] "" SLAVE
+    SG_ critical_pack_overvolt m1 : 18|1@1+ (1,0) [0|0] "" SLAVE
+    SG_ critical_pack_undervolt m1 : 19|1@1+ (1,0) [0|0] "" SLAVE
+    SG_ critical_pack_overtemp m1 : 20|1@1+ (1,0) [0|0] "" SLAVE
+    SG_ critical_pack_undertemp m1 : 21|1@1+ (1,0) [0|0] "" SLAVE
+    SG_ critical_power_supply_overvolt m1 : 22|1@1+ (1,0) [0|0] "" SLAVE
+    SG_ critical_power_supply_undervolt m1 : 23|1@1+ (1,0) [0|0] "" SLAVE
+    SG_ critical_cell_charge_overtemp m1 : 24|1@1+ (1,0) [0|0] "" SLAVE
+    SG_ critical_cell_voltage_differential m1 : 25|1@1+ (1,0) [0|0] "" SLAVE
+    SG_ critical_single_cell_undervolt m1 : 26|1@1+ (1,0) [0|0] "" SLAVE
+    SG_ critical_single_cell_overvolt m1 : 27|1@1+ (1,0) [0|0] "" SLAVE
+    SG_ critical_soc_low m1 : 28|1@1+ (1,0) [0|0] "" SLAVE
+    SG_ critical_soc_high m1 : 29|1@1+ (1,0) [0|0] "" SLAVE
+    SG_ critical_insulation_resistance m1 : 30|1@1+ (1,0) [0|0] "" SLAVE
+    SG_ critical_discharge_overcurrent m1 : 31|1@1+ (1,0) [0|0] "" SLAVE
+    SG_ critical_cell_soc_differential m1 : 35|1@1+ (1,0) [0|0] "" SLAVE
+    SG_ critical_cell_temperature_differential m1 : 36|1@1+ (1,0) [0|0] "" SLAVE
+    SG_ critical_discharge_overtemp m1 : 37|1@1+ (1,0) [0|0] "" SLAVE
+    SG_ critical_charge_overtemp m1 : 38|1@1+ (1,0) [0|0] "" SLAVE
+    SG_ critical_charge_undertemp m1 : 39|1@1+ (1,0) [0|0] "" SLAVE
 
 
 CM_ BO_ 406768872 "Temp Voltage Frame 183ECCE8";
