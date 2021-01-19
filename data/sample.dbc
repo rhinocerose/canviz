@@ -32,22 +32,22 @@ NS_ :
     SG_MUL_VAL_
 
 BS_:
-BU_: MASTER SLAVE
+BU_: MASTER SLAVE/181
 
-BO_ 406768872 TEMP_VOLTAGE_FRAME: 8 MASTER
-    SG_ temperature_diode : 0|8@1+ (1,-40) [-40|215] "Celcius" SLAVE
-    SG_ voltage_max_mono : 40|16@0+ (0.001,0) [0|65.535] "Volts" SLAVE
-    SG_ voltage_min_mono : 24|16@0+ (0.001,0) [0|65.535] "Volts" SLAVE
-    SG_ temperature_contactor : 40|8@1+ (1,-40) [-40|215] "Celcius" SLAVE
-    SG_ temperature_max_mono : 48|8@1+ (1,-40) [-40|215] "Celcius" SLAVE
-    SG_ temperature_min_mono : 56|8@1+ (1,-40) [-40|215] "Celcius" SLAVE
-
-BO_ 406899944 POWER_CURRENT: 8 MASTER
-    SG_ power_instant : 0|16@0+ (0.1,-1600) [-1600|4953.5] "Watt-Hours" SLAVE
-    SG_ power_cumulative : 48|16@0+ (0.1,-1600) [-1600|4953.5] "Watt-Hours" SLAVE
-    SG_ current_hall : 16|16@0+ (0.1,-1600) [-1600|4953.5] "Amps" SLAVE
-    SG_ current_shunt : 0|16@0+ (0.1,-1600) [-1600|4953.5] "Amps" SLAVE
-
+BO_ 404813184 SLAVE1_OVERVIEW1: 8 MASTER
+    SG_ hv1_voltage : 0|16@0+ (0.1,0) [0|6553.5] "Volts" SLAVE
+    SG_ hv2_voltage : 16|16@0+ (0.1,0) [0|6553.5] "Volts" SLAVE
+    SG_ current_sensor_voltage : 32|16@0+ (0.1,-1600) [-1600|4953.5] "Amps" SLAVE
+    SG_ module_soc : 48|8@1+ (1,0) [0|100] "Percent" SLAVE
+    SG_ output_1 : 56|1@1+ (1,0) [0|0] "" SLAVE
+    SG_ output_2 : 57|1@1+ (1,0) [0|0] "" SLAVE
+    SG_ output_3 : 58|1@1+ (1,0) [0|0] "" SLAVE
+    SG_ output_4 : 59|1@1+ (1,0) [0|0] "" SLAVE
+    SG_ output_5 : 60|1@1+ (1,0) [0|0] "" SLAVE
+    SG_ output_6 : 61|1@1+ (1,0) [0|0] "" SLAVE
+    SG_ output_7 : 62|1@1+ (1,0) [0|0] "" SLAVE
+    SG_ output_8 : 63|1@1+ (1,0) [0|0] "" SLAVE
+    
 BO_ 406834408 SOC_CURRENT: 8 MASTER
     SG_ state_current_num : 0|8@1+ (1,0) [0|7] "STATE" SLAVE
     SG_ soc : 8|8@1+ (1,0) [0|100] "Percent" SLAVE
@@ -89,17 +89,15 @@ BO_ 406113512 RAW_FRAME: 8 MASTER
     SG_ raw_current_hall m2 : 24|16@0+ (0.1,-1600) [-1600|4953.5] "Amps" SLAVE
     SG_ raw_current_shunt m2 : 40|16@0+ (0.1,-1600) [-1600|4953.5] "Amps" SLAVE
     SG_ raw_soc m2 : 56|8@1+ (1,0) [0|100] "Percent" SLAVE
-    SG_ raw_k_value m3 : 8|16@0+ (1,0) [0|65535] "" SLAVE
+    SG_ raw_voltage_supply m3 : 8|16@0+ (0.1,0) [0|6553.5] "Volts" SLAVE
     SG_ raw_voltage_inverter m3 : 24|16@0+ (0.1,0) [0|6553.5] "Volts" SLAVE
-    SG_ raw_voltage_supply m3 : 40|16@0+ (0.1,0) [0|6553.5] "Volts" SLAVE
+    SG_ raw_voltage_stack m3 : 40|16@0+ (0.1,0) [0|6553.5] "Volts" SLAVE
     SG_ raw_soh m3 : 56|8@1+ (1,0) [0|100] "Percent" SLAVE
-    SG_ raw_discharge_cumulative m4 : 8|16@0+ (0.1,-1600) [-1600|4953.5] "Amp-Hours" SLAVE
-    SG_ raw_discharge_absolute m4 : 24|16@0+ (0.1,-1600) [-1600|4953.5] "Amp-Hours" SLAVE
-    SG_ raw_months_of_service m4 : 40|16@0+ (0.1,-1600) [-1600|4953.5] "Months" SLAVE
 
 BO_ 405851368 MONOBLOCK_VOLTAGE_FRAMES: 8 MASTER
 BO_ 405916904 MONOBLOCK_TEMPERATURE_FRAMES: 8 MASTER
 BO_ 406375656 STATE_MACHINE_DEBUG_FRAMES: 8 MASTER
+0
 
 BO_ 406703336 ERROR_FRAME: 8 MASTER
     SG_ raw_errorid M : 0|8@1+ (1,0) [0|0] "" SLAVE
@@ -125,7 +123,7 @@ BO_ 406703336 ERROR_FRAME: 8 MASTER
     SG_ critical_charge_overtemp m1 : 38|1@1+ (1,0) [0|0] "" SLAVE
     SG_ critical_charge_undertemp m1 : 39|1@1+ (1,0) [0|0] "" SLAVE
 
-
+0
 CM_ BO_ 406768872 "Temp Voltage Frame 183ECCE8";
 CM_ BO_ 406899944 "Power Current Frame 1840CCE8";
 CM_ BO_ 406834408 "SOC Current Frame 183FCCE8";
