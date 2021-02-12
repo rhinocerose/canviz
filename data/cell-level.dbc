@@ -34,71 +34,8 @@ NS_ :
 BS_:
 BU_: MASTER SLAVE
 
-BO_ 406768872 TEMP_VOLTAGE_FRAME: 8 MASTER
-    SG_ temperature_diode : 0|8@1+ (1,-40) [-40|215] "Celcius" SLAVE
-    SG_ voltage_max_mono : 40|16@0+ (0.001,0) [0|65.535] "Volts" SLAVE
-    SG_ voltage_min_mono : 24|16@0+ (0.001,0) [0|65.535] "Volts" SLAVE
-    SG_ temperature_contactor : 40|8@1+ (1,-40) [-40|215] "Celcius" SLAVE
-    SG_ temperature_max_mono : 48|8@1+ (1,-40) [-40|215] "Celcius" SLAVE
-    SG_ temperature_min_mono : 56|8@1+ (1,-40) [-40|215] "Celcius" SLAVE
-
-BO_ 406899944 POWER_CURRENT: 8 MASTER
-    SG_ power_instant : 0|16@0+ (0.1,-1600) [-1600|4953.5] "Watt-Hours" SLAVE
-    SG_ power_cumulative : 48|16@0+ (0.1,-1600) [-1600|4953.5] "Watt-Hours" SLAVE
-    SG_ current_hall : 16|16@0+ (0.1,-1600) [-1600|4953.5] "Amps" SLAVE
-    SG_ current_shunt : 0|16@0+ (0.1,-1600) [-1600|4953.5] "Amps" SLAVE
-
-BO_ 406834408 SOC_CURRENT: 8 MASTER
-    SG_ state_current_num : 0|8@1+ (1,0) [0|7] "STATE" SLAVE
-    SG_ soc : 8|8@1+ (1,0) [0|100] "Percent" SLAVE
-    SG_ input_1 : 16|1@1+ (1,0) [0|0] "" SLAVE
-    SG_ input_2 : 17|1@1+ (1,0) [0|0] "" SLAVE
-    SG_ input_3 : 18|1@1+ (1,0) [0|0] "" SLAVE
-    SG_ input_4 : 19|1@1+ (1,0) [0|0] "" SLAVE
-    SG_ input_5 : 20|1@1+ (1,0) [0|0] "" SLAVE
-    SG_ input_6 : 21|1@1+ (1,0) [0|0] "" SLAVE
-    SG_ input_7 : 22|1@1+ (1,0) [0|0] "" SLAVE
-    SG_ input_8 : 23|1@1+ (1,0) [0|0] "" SLAVE
-    SG_ output_1 : 24|1@1+ (1,0) [0|0] "" SLAVE
-    SG_ output_2 : 25|1@1+ (1,0) [0|0] "" SLAVE
-    SG_ output_3 : 26|1@1+ (1,0) [0|0] "" SLAVE
-    SG_ output_4 : 27|1@1+ (1,0) [0|0] "" SLAVE
-    SG_ output_5 : 28|1@1+ (1,0) [0|0] "" SLAVE
-    SG_ output_6 : 29|1@1+ (1,0) [0|0] "" SLAVE
-    SG_ output_7 : 30|1@1+ (1,0) [0|0] "" SLAVE
-    SG_ output_8 : 31|1@1+ (1,0) [0|0] "" SLAVE
-    SG_ voltage_stack : 16|16@0+ (0.1,0) [0|6553.5] "Volts" SLAVE
-    SG_ current_system : 0|16@0+ (0.1,-1600) [-1600|4953.5] "Amps" SLAVE
-
-BO_ 406637800 DEBUG_FRAME: 8 MASTER
-    SG_ debug_frame_id M : 0|8@1+ (1,0) [0|0] "" SLAVE
-    SG_ voltage_hv1 m4 : 8|16@1+ (0.1,0) [0|6553.5] "Volts" SLAVE
-    SG_ voltage_hv2 m4 : 24|16@1+ (0.1,0) [0|6553.5] "Volts" SLAVE
-    SG_ voltage_supply m4 : 40|16@1+ (0.1,0) [0|6553.5] "Volts" SLAVE
-
-BO_ 406113512 RAW_FRAME: 8 MASTER
-    SG_ raw_frameid M : 0|8@1+ (1,0) [0|7] "" SLAVE
-    SG_ raw_state_present_num m1 : 8|8@1+ (1,0) [0|7] "STATE" SLAVE
-    SG_ raw_state_previous_num m1 : 16|8@1+ (1,00.94736842105263157894736842105263 ) [0|7] "STATE" SLAVE
-    SG_ raw_state_historic_num m1 : 24|8@1+ (1,0) [0|7] "STATE" SLAVE
-    SG_ raw_temperature_system m1 : 40|8@1+ (1,-40) [-40|215] "Celcius" SLAVE
-    SG_ raw_state_error_message m1 : 32|8@1+ (1,0) [0|25] "" SLAVE
-    SG_ raw_temperature_diode m1 : 48|8@1+ (1,-40) [-40|215] "Celcius" SLAVE
-    SG_ raw_temperature_contactor m1 : 56|8@1+ (1,-40) [-40|215] "Celcius" SLAVE
-    SG_ raw_current_system m2 : 8|16@0+ (0.1,-1600) [-1600|4953.5] "Amps" SLAVE
-    SG_ raw_current_hall m2 : 24|16@0+ (0.1,-1600) [-1600|4953.5] "Amps" SLAVE
-    SG_ raw_current_shunt m2 : 40|16@0+ (0.1,-1600) [-1600|4953.5] "Amps" SLAVE
-    SG_ raw_soc m2 : 56|8@1+ (1,0) [0|100] "Percent" SLAVE
-    SG_ raw_k_value m3 : 8|16@0+ (1,0) [0|65535] "" SLAVE
-    SG_ raw_voltage_inverter m3 : 24|16@0+ (0.1,0) [0|6553.5] "Volts" SLAVE
-    SG_ raw_voltage_supply m3 : 40|16@0+ (0.1,0) [0|6553.5] "Volts" SLAVE
-    SG_ raw_soh m3 : 56|8@1+ (1,0) [0|100] "Percent" SLAVE
-    SG_ raw_discharge_cumulative m4 : 8|16@0+ (0.1,-1600) [-1600|4953.5] "Amp-Hours" SLAVE
-    SG_ raw_discharge_absolute m4 : 24|16@0+ (0.1,-1600) [-1600|4953.5] "Amp-Hours" SLAVE
-    SG_ raw_months_of_service m4 : 40|16@0+ (0.1,-1600) [-1600|4953.5] "Months" SLAVE
-
-BO_ 405851368 MONOBLOCK_VOLTAGE_FRAMES: 8 MASTER
-    SG_ raw_mb_voltage_frameid M : 0|8@1+ (1,0) [0|12] "" SLAVE
+BO_ 405927144 CELL_VOLTAGE_FRAMES: 8 MASTER
+    SG_ raw_mb_voltage_frameid M : 8|8@1+ (1,0) [0|12] "" SLAVE
     SG_ raw_mb1_voltage m1 : 32|16@0+ (0.001,0) [0|6553.5] "Volts" SLAVE
     SG_ raw_mb2_voltage m1 : 16|16@0+ (0.001,0) [0|6553.5] "Volts" SLAVE
     SG_ raw_mb3_voltage m1 : 0|16@0+ (0.001,0) [0|6553.5] "Volts" SLAVE
@@ -137,47 +74,6 @@ BO_ 405851368 MONOBLOCK_VOLTAGE_FRAMES: 8 MASTER
     SG_ raw_mb36_voltage m12 : 0|16@0+ (0.001,0) [0|6553.5] "Volts" SLAVE
     SG_ raw_mb37_voltage m13 : 32|16@0+ (0.001,0) [0|6553.5] "Volts" SLAVE
     SG_ raw_mb38_voltage m13 : 16|16@0+ (0.001,0) [0|6553.5] "Volts" SLAVE
-
-BO_ 405916904 MONOBLOCK_TEMPERATURE_FRAMES: 8 MASTER
-    SG_ raw_mb_temp_frameid M : 0|8@1+ (1,0) [0|12] "" SLAVE
-    SG_ raw_mb1_temp m1 : 16|8@1+ (1,-40) [-40|215] "Celcius" SLAVE
-    SG_ raw_mb2_temp m1 : 24|8@1+ (1,-40) [-40|215] "Celcius" SLAVE
-    SG_ raw_mb3_temp m1 : 32|8@1+ (1,-40) [-40|215] "Celcius" SLAVE
-    SG_ raw_mb4_temp m1 : 40|8@1+ (1,-40) [-40|215] "Celcius" SLAVE
-    SG_ raw_mb5_temp m1 : 48|8@1+ (1,-40) [-40|215] "Celcius" SLAVE
-    SG_ raw_mb6_temp m1 : 56|8@1+ (1,-40) [-40|215] "Celcius" SLAVE
-    SG_ raw_mb7_temp m2 : 16|8@1+ (1,-40) [-40|215] "Celcius" SLAVE
-    SG_ raw_mb8_temp m2 : 24|8@1+ (1,-40) [-40|215] "Celcius" SLAVE
-    SG_ raw_mb9_temp m2 : 32|8@1+ (1,-40) [-40|215] "Celcius" SLAVE
-    SG_ raw_mb10_temp m2 : 40|8@1+ (1,-40) [-40|215] "Celcius" SLAVE
-    SG_ raw_mb11_temp m2 : 48|8@1+ (1,-40) [-40|215] "Celcius" SLAVE
-    SG_ raw_mb12_temp m2 : 56|8@1+ (1,-40) [-40|215] "Celcius" SLAVE
-    SG_ raw_mb13_temp m3 : 16|8@1+ (1,-40) [-40|215] "Celcius" SLAVE
-    SG_ raw_mb14_temp m3 : 24|8@1+ (1,-40) [-40|215] "Celcius" SLAVE
-    SG_ raw_mb15_temp m3 : 32|8@1+ (1,-40) [-40|215] "Celcius" SLAVE
-    SG_ raw_mb16_temp m3 : 40|8@1+ (1,-40) [-40|215] "Celcius" SLAVE
-    SG_ raw_mb17_temp m3 : 48|8@1+ (1,-40) [-40|215] "Celcius" SLAVE
-    SG_ raw_mb18_temp m3 : 56|8@1+ (1,-40) [-40|215] "Celcius" SLAVE
-    SG_ raw_mb19_temp m4 : 16|8@1+ (1,-40) [-40|215] "Celcius" SLAVE
-    SG_ raw_mb20_temp m4 : 24|8@1+ (1,-40) [-40|215] "Celcius" SLAVE
-    SG_ raw_mb21_temp m4 : 32|8@1+ (1,-40) [-40|215] "Celcius" SLAVE
-    SG_ raw_mb22_temp m4 : 40|8@1+ (1,-40) [-40|215] "Celcius" SLAVE
-    SG_ raw_mb23_temp m4 : 48|8@1+ (1,-40) [-40|215] "Celcius" SLAVE
-    SG_ raw_mb24_temp m4 : 56|8@1+ (1,-40) [-40|215] "Celcius" SLAVE
-    SG_ raw_mb25_temp m5 : 16|8@1+ (1,-40) [-40|215] "Celcius" SLAVE
-    SG_ raw_mb26_temp m5 : 24|8@1+ (1,-40) [-40|215] "Celcius" SLAVE
-    SG_ raw_mb27_temp m5 : 32|8@1+ (1,-40) [-40|215] "Celcius" SLAVE
-    SG_ raw_mb28_temp m5 : 40|8@1+ (1,-40) [-40|215] "Celcius" SLAVE
-    SG_ raw_mb29_temp m5 : 48|8@1+ (1,-40) [-40|215] "Celcius" SLAVE
-    SG_ raw_mb30_temp m5 : 56|8@1+ (1,-40) [-40|215] "Celcius" SLAVE
-    SG_ raw_mb31_temp m6 : 16|8@1+ (1,-40) [-40|215] "Celcius" SLAVE
-    SG_ raw_mb32_temp m6 : 24|8@1+ (1,-40) [-40|215] "Celcius" SLAVE
-    SG_ raw_mb33_temp m6 : 32|8@1+ (1,-40) [-40|215] "Celcius" SLAVE
-    SG_ raw_mb34_temp m6 : 40|8@1+ (1,-40) [-40|215] "Celcius" SLAVE
-    SG_ raw_mb35_temp m6 : 48|8@1+ (1,-40) [-40|215] "Celcius" SLAVE
-    SG_ raw_mb36_temp m6 : 56|8@1+ (1,-40) [-40|215] "Celcius" SLAVE
-    SG_ raw_mb37_temp m7 : 16|8@1+ (1,-40) [-40|215] "Celcius" SLAVE
-    SG_ raw_mb38_temp m7 : 24|8@1+ (1,-40) [-40|215] "Celcius" SLAVE
 
 BO_ 406375656 STATE_MACHINE_DEBUG_FRAMES: 8 MASTER
 BO_ 406703336 ERROR_FRAME: 8 MASTER
