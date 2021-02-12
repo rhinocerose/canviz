@@ -74,6 +74,28 @@ BO_ 405927144 CELL_VOLTAGE_FRAMES: 8 MASTER
     SG_ raw_mb36_voltage m12 : 0|16@0+ (0.001,0) [0|6553.5] "Volts" SLAVE
     SG_ raw_mb37_voltage m13 : 32|16@0+ (0.001,0) [0|6553.5] "Volts" SLAVE
     SG_ raw_mb38_voltage m13 : 16|16@0+ (0.001,0) [0|6553.5] "Volts" SLAVE
+    SG_ raw_mb39_voltage m13 : 0|16@0+ (0.001,0) [0|6553.5] "Volts" SLAVE
+    SG_ raw_mb40_voltage m14 : 32|16@0+ (0.001,0) [0|6553.5] "Volts" SLAVE
+    SG_ raw_mb41_voltage m14 : 16|16@0+ (0.001,0) [0|6553.5] "Volts" SLAVE
+    SG_ raw_mb42_voltage m14 : 0|16@0+ (0.001,0) [0|6553.5] "Volts" SLAVE
+    SG_ raw_mb43_voltage m15 : 32|16@0+ (0.001,0) [0|6553.5] "Volts" SLAVE
+    SG_ raw_mb44_voltage m15 : 16|16@0+ (0.001,0) [0|6553.5] "Volts" SLAVE
+    SG_ raw_mb45_voltage m15 : 0|16@0+ (0.001,0) [0|6553.5] "Volts" SLAVE
+    SG_ raw_mb46_voltage m16 : 32|16@0+ (0.001,0) [0|6553.5] "Volts" SLAVE
+    SG_ raw_mb47_voltage m16 : 16|16@0+ (0.001,0) [0|6553.5] "Volts" SLAVE
+    SG_ raw_mb48_voltage m16 : 0|16@0+ (0.001,0) [0|6553.5] "Volts" SLAVE
+    SG_ raw_mb49_voltage m17 : 32|16@0+ (0.001,0) [0|6553.5] "Volts" SLAVE
+    SG_ raw_mb50_voltage m17 : 16|16@0+ (0.001,0) [0|6553.5] "Volts" SLAVE
+    SG_ raw_mb51_voltage m17 : 0|16@0+ (0.001,0) [0|6553.5] "Volts" SLAVE
+    SG_ raw_mb52_voltage m18 : 32|16@0+ (0.001,0) [0|6553.5] "Volts" SLAVE
+    SG_ raw_mb53_voltage m18 : 16|16@0+ (0.001,0) [0|6553.5] "Volts" SLAVE
+    SG_ raw_mb54_voltage m18 : 0|16@0+ (0.001,0) [0|6553.5] "Volts" SLAVE
+    SG_ raw_mb55_voltage m19 : 32|16@0+ (0.001,0) [0|6553.5] "Volts" SLAVE
+    SG_ raw_mb56_voltage m19 : 16|16@0+ (0.001,0) [0|6553.5] "Volts" SLAVE
+    SG_ raw_mb57_voltage m19 : 0|16@0+ (0.001,0) [0|6553.5] "Volts" SLAVE
+    SG_ raw_mb58_voltage m20 : 32|16@0+ (0.001,0) [0|6553.5] "Volts" SLAVE
+    SG_ raw_mb59_voltage m20 : 16|16@0+ (0.001,0) [0|6553.5] "Volts" SLAVE
+    SG_ raw_mb60_voltage m20 : 0|16@0+ (0.001,0) [0|6553.5] "Volts" SLAVE
 
 BO_ 406375656 STATE_MACHINE_DEBUG_FRAMES: 8 MASTER
 BO_ 406703336 ERROR_FRAME: 8 MASTER
