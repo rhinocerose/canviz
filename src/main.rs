@@ -96,12 +96,14 @@ async fn main() -> Result<()> {
 // Given a CAN Frame, lookup the can signals and print the signal values
 fn print_dbc_signals(signal_lookup: &HashMap<u32, (String, Vec<Signal>, &str)>, frame: &CANFrame, raw_data: bool) {
     let id = frame.id() & !socketcan::EFF_FLAG;
+    let arrlength = id.len();
     let (message_name, signals, _comment) = signal_lookup.get(&id).expect("Unknown message id");
     let message_name_s = format!("{:<30}", message_name);
     println!("\n{} Frame ID: {:08X}", Purple.paint(message_name_s), frame.id());
 
     for signal in signals.iter() {
-        let frame_data: [u8; 8] = frame
+      
+        let frame_data: [u8; arrlength] = frame
             .data()
             .try_into()
             .expect("slice with incorrect length");
