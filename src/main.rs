@@ -75,7 +75,12 @@ async fn main() -> Result<()> {
         match socket_result {
             Ok(frame) => {
                 if let Some(signal_lookup) = signal_lookup.as_ref() {
-                    if (((frame.id() << 16) >> 16) == 0xCCE8) || frame.id() == 0x1831f4e8 {
+                    if (((frame.id() << 16) >> 16) == 0xCCE8) || 
+                          frame.id() == 0x1811f580 || 
+                          frame.id() == 0x1811f581 || 
+                          frame.id() == 0x1811f582 ||
+                          frame.id() == 0x1811f583 ||
+                          frame.id() == 0x1831f4e8 || {
                         print_dbc_signals(signal_lookup, &frame, raw);
                     }
                 }
