@@ -42,7 +42,7 @@ BO_ 406768872 TEMP_VOLTAGE_FRAME: 8 MASTER
     SG_ temperature_max_mono : 48|8@1+ (1,-40) [-40|215] "Celcius" SLAVE
     SG_ temperature_min_mono : 56|8@1+ (1,-40) [-40|215] "Celcius" SLAVE
 
-BO_ 403830144 CELL_VOLTAGE_MASTER_FRAMES: 8 MASTER
+BO_ 403830144 CELL_VOLTAGE_SLAVE1_FRAMES: 8 MASTER
     SG_ raw_cell_voltage_frameid M : 8|8@1+ (1,0) [0|12] "" SLAVE
     SG_ raw_batt1_cell1_voltage m1 : 32|16@0+ (0.001,0) [0|6553.5] "Volts" SLAVE
     SG_ raw_batt1_cell2_voltage m1 : 16|16@0+ (0.001,0) [0|6553.5] "Volts" SLAVE
@@ -71,27 +71,140 @@ BO_ 403830144 CELL_VOLTAGE_MASTER_FRAMES: 8 MASTER
     SG_ raw_batt7_cell1_voltage m25 : 32|16@0+ (0.001,0) [0|6553.5] "Volts" SLAVE
     SG_ raw_batt7_cell2_voltage m25 : 16|16@0+ (0.001,0) [0|6553.5] "Volts" SLAVE
     SG_ raw_batt7_cell3_voltage m25 : 0|16@0+ (0.001,0) [0|6553.5] "Volts" SLAVE
-    SG_ raw_batt7_cell4_voltage m28 : 0|16@0+ (0.001,0) [0|6553.5] "Volts" SLAVE
-    SG_ raw_batt8_cell1_voltage m28 : 32|16@0+ (0.001,0) [0|6553.5] "Volts" SLAVE
-    SG_ raw_batt8_cell2_voltage m28 : 16|16@0+ (0.001,0) [0|6553.5] "Volts" SLAVE
-    SG_ raw_batt8_cell3_voltage m31 : 0|16@0+ (0.001,0) [0|6553.5] "Volts" SLAVE
-    SG_ raw_batt8_cell4_voltage m31 : 32|16@0+ (0.001,0) [0|6553.5] "Volts" SLAVE
-    SG_ raw_batt9_cell1_voltage m31 : 16|16@0+ (0.001,0) [0|6553.5] "Volts" SLAVE
-    SG_ raw_batt9_cell2_voltage m34 : 0|16@0+ (0.001,0) [0|6553.5] "Volts" SLAVE
-    SG_ raw_batt9_cell3_voltage m34 : 32|16@0+ (0.001,0) [0|6553.5] "Volts" SLAVE
-    SG_ raw_batt9_cell4_voltage m34 : 16|16@0+ (0.001,0) [0|6553.5] "Volts" SLAVE
-    SG_ raw_batt10_cell1_voltage m37 : 0|16@0+ (0.001,0) [0|6553.5] "Volts" SLAVE
-    SG_ raw_batt10_cell2_voltage m37 : 32|16@0+ (0.001,0) [0|6553.5] "Volts" SLAVE
-    SG_ raw_batt10_cell3_voltage m37 : 16|16@0+ (0.001,0) [0|6553.5] "Volts" SLAVE
-    SG_ raw_batt10_cell4_voltage m40 : 0|16@0+ (0.001,0) [0|6553.5] "Volts" SLAVE
-    SG_ raw_batt11_cell1_voltage m40 : 32|16@0+ (0.001,0) [0|6553.5] "Volts" SLAVE
-    SG_ raw_batt11_cell2_voltage m40 : 16|16@0+ (0.001,0) [0|6553.5] "Volts" SLAVE
-    SG_ raw_batt11_cell3_voltage m43 : 0|16@0+ (0.001,0) [0|6553.5] "Volts" SLAVE
+    SG_ raw_batt7_cell4_voltage m28 : 32|16@0+ (0.001,0) [0|6553.5] "Volts" SLAVE
+    SG_ raw_batt8_cell1_voltage m28 : 16|16@0+ (0.001,0) [0|6553.5] "Volts" SLAVE
+    SG_ raw_batt8_cell2_voltage m28 : 0|16@0+ (0.001,0) [0|6553.5] "Volts" SLAVE
+    SG_ raw_batt8_cell3_voltage m31 : 32|16@0+ (0.001,0) [0|6553.5] "Volts" SLAVE
+    SG_ raw_batt8_cell4_voltage m31 : 16|16@0+ (0.001,0) [0|6553.5] "Volts" SLAVE
+    SG_ raw_batt9_cell1_voltage m31 : 0|16@0+ (0.001,0) [0|6553.5] "Volts" SLAVE
+    SG_ raw_batt9_cell2_voltage m34 : 32|16@0+ (0.001,0) [0|6553.5] "Volts" SLAVE
+    SG_ raw_batt9_cell3_voltage m34 : 16|16@0+ (0.001,0) [0|6553.5] "Volts" SLAVE
+    SG_ raw_batt9_cell4_voltage m34 : 0|16@0+ (0.001,0) [0|6553.5] "Volts" SLAVE
+    SG_ raw_batt10_cell1_voltage m37 : 32|16@0+ (0.001,0) [0|6553.5] "Volts" SLAVE
+    SG_ raw_batt10_cell2_voltage m37 : 16|16@0+ (0.001,0) [0|6553.5] "Volts" SLAVE
+    SG_ raw_batt10_cell3_voltage m37 : 0|16@0+ (0.001,0) [0|6553.5] "Volts" SLAVE
+    SG_ raw_batt10_cell4_voltage m40 : 32|16@0+ (0.001,0) [0|6553.5] "Volts" SLAVE
+    SG_ raw_batt11_cell1_voltage m40 : 16|16@0+ (0.001,0) [0|6553.5] "Volts" SLAVE
+    SG_ raw_batt11_cell2_voltage m40 : 0|16@0+ (0.001,0) [0|6553.5] "Volts" SLAVE
+    SG_ raw_batt11_cell3_voltage m43 : 32|16@0+ (0.001,0) [0|6553.5] "Volts" SLAVE
     SG_ raw_batt11_cell4_voltage m43 : 16|16@0+ (0.001,0) [0|6553.5] "Volts" SLAVE
     SG_ raw_batt12_cell1_voltage m43 : 0|16@0+ (0.001,0) [0|6553.5] "Volts" SLAVE
     SG_ raw_batt12_cell2_voltage m46 : 32|16@0+ (0.001,0) [0|6553.5] "Volts" SLAVE
     SG_ raw_batt12_cell3_voltage m46 : 16|16@0+ (0.001,0) [0|6553.5] "Volts" SLAVE
     SG_ raw_batt12_cell4_voltage m46 : 0|16@0+ (0.001,0) [0|6553.5] "Volts" SLAVE
+
+BO_ 403830145 CELL_VOLTAGE_SLAVE2_FRAMES: 8 MASTER
+    SG_ raw_cell_voltage_frameid M : 8|8@1+ (1,0) [0|12] "" SLAVE
+    SG_ raw_batt13_cell1_voltage m1 : 32|16@0+ (0.001,0) [0|6553.5] "Volts" SLAVE
+    SG_ raw_batt13_cell2_voltage m1 : 16|16@0+ (0.001,0) [0|6553.5] "Volts" SLAVE
+    SG_ raw_batt13_cell3_voltage m1 : 0|16@0+ (0.001,0) [0|6553.5] "Volts" SLAVE
+    SG_ raw_batt13_cell4_voltage m4 : 32|16@0+ (0.001,0) [0|6553.5] "Volts" SLAVE
+    SG_ raw_batt14_cell1_voltage m4 : 16|16@0+ (0.001,0) [0|6553.5] "Volts" SLAVE
+    SG_ raw_batt14_cell2_voltage m4 : 0|16@0+ (0.001,0) [0|6553.5] "Volts" SLAVE
+    SG_ raw_batt14_cell3_voltage m7 : 32|16@0+ (0.001,0) [0|6553.5] "Volts" SLAVE
+    SG_ raw_batt14_cell4_voltage m7 : 16|16@0+ (0.001,0) [0|6553.5] "Volts" SLAVE
+    SG_ raw_batt15_cell1_voltage m7 : 0|16@0+ (0.001,0) [0|6553.5] "Volts" SLAVE
+    SG_ raw_batt15_cell2_voltage m10 : 32|16@0+ (0.001,0) [0|6553.5] "Volts" SLAVE
+    SG_ raw_batt15_cell3_voltage m10 : 16|16@0+ (0.001,0) [0|6553.5] "Volts" SLAVE
+    SG_ raw_batt15_cell4_voltage m10 : 0|16@0+ (0.001,0) [0|6553.5] "Volts" SLAVE
+    SG_ raw_batt16_cell1_voltage m13 : 32|16@0+ (0.001,0) [0|6553.5] "Volts" SLAVE
+    SG_ raw_batt16_cell2_voltage m13 : 16|16@0+ (0.001,0) [0|6553.5] "Volts" SLAVE
+    SG_ raw_batt16_cell3_voltage m13 : 0|16@0+ (0.001,0) [0|6553.5] "Volts" SLAVE
+    SG_ raw_batt16_cell4_voltage m16 : 32|16@0+ (0.001,0) [0|6553.5] "Volts" SLAVE
+    SG_ raw_batt17_cell1_voltage m16 : 16|16@0+ (0.001,0) [0|6553.5] "Volts" SLAVE
+    SG_ raw_batt17_cell2_voltage m16 : 0|16@0+ (0.001,0) [0|6553.5] "Volts" SLAVE
+    SG_ raw_batt17_cell3_voltage m19 : 32|16@0+ (0.001,0) [0|6553.5] "Volts" SLAVE
+    SG_ raw_batt17_cell4_voltage m19 : 16|16@0+ (0.001,0) [0|6553.5] "Volts" SLAVE
+    SG_ raw_batt18_cell1_voltage m19 : 0|16@0+ (0.001,0) [0|6553.5] "Volts" SLAVE
+    SG_ raw_batt18_cell2_voltage m22 : 32|16@0+ (0.001,0) [0|6553.5] "Volts" SLAVE
+    SG_ raw_batt18_cell3_voltage m22 : 16|16@0+ (0.001,0) [0|6553.5] "Volts" SLAVE
+    SG_ raw_batt18_cell4_voltage m22 : 0|16@0+ (0.001,0) [0|6553.5] "Volts" SLAVE
+    SG_ raw_batt19_cell1_voltage m25 : 32|16@0+ (0.001,0) [0|6553.5] "Volts" SLAVE
+    SG_ raw_batt19_cell2_voltage m25 : 16|16@0+ (0.001,0) [0|6553.5] "Volts" SLAVE
+    SG_ raw_batt19_cell3_voltage m25 : 0|16@0+ (0.001,0) [0|6553.5] "Volts" SLAVE
+    SG_ raw_batt19_cell4_voltage m28 : 32|16@0+ (0.001,0) [0|6553.5] "Volts" SLAVE
+
+BO_ 403830146 CELL_VOLTAGE_SLAVE3_FRAMES: 8 MASTER
+    SG_ raw_cell_voltage_frameid M : 8|8@1+ (1,0) [0|12] "" SLAVE
+    SG_ raw_batt20_cell1_voltage m1 : 32|16@0+ (0.001,0) [0|6553.5] "Volts" SLAVE
+    SG_ raw_batt20_cell2_voltage m1 : 16|16@0+ (0.001,0) [0|6553.5] "Volts" SLAVE
+    SG_ raw_batt20_cell3_voltage m1 : 0|16@0+ (0.001,0) [0|6553.5] "Volts" SLAVE
+    SG_ raw_batt20_cell4_voltage m4 : 32|16@0+ (0.001,0) [0|6553.5] "Volts" SLAVE
+    SG_ raw_batt21_cell1_voltage m4 : 16|16@0+ (0.001,0) [0|6553.5] "Volts" SLAVE
+    SG_ raw_batt21_cell2_voltage m4 : 0|16@0+ (0.001,0) [0|6553.5] "Volts" SLAVE
+    SG_ raw_batt21_cell3_voltage m7 : 32|16@0+ (0.001,0) [0|6553.5] "Volts" SLAVE
+    SG_ raw_batt21_cell4_voltage m7 : 16|16@0+ (0.001,0) [0|6553.5] "Volts" SLAVE
+    SG_ raw_batt22_cell1_voltage m7 : 0|16@0+ (0.001,0) [0|6553.5] "Volts" SLAVE
+    SG_ raw_batt22_cell2_voltage m10 : 32|16@0+ (0.001,0) [0|6553.5] "Volts" SLAVE
+    SG_ raw_batt22_cell3_voltage m10 : 16|16@0+ (0.001,0) [0|6553.5] "Volts" SLAVE
+    SG_ raw_batt22_cell4_voltage m10 : 0|16@0+ (0.001,0) [0|6553.5] "Volts" SLAVE
+    SG_ raw_batt23_cell1_voltage m13 : 32|16@0+ (0.001,0) [0|6553.5] "Volts" SLAVE
+    SG_ raw_batt23_cell2_voltage m13 : 16|16@0+ (0.001,0) [0|6553.5] "Volts" SLAVE
+    SG_ raw_batt23_cell3_voltage m13 : 0|16@0+ (0.001,0) [0|6553.5] "Volts" SLAVE
+    SG_ raw_batt23_cell4_voltage m16 : 32|16@0+ (0.001,0) [0|6553.5] "Volts" SLAVE
+    SG_ raw_batt24_cell1_voltage m16 : 16|16@0+ (0.001,0) [0|6553.5] "Volts" SLAVE
+    SG_ raw_batt24_cell2_voltage m16 : 0|16@0+ (0.001,0) [0|6553.5] "Volts" SLAVE
+    SG_ raw_batt24_cell3_voltage m19 : 32|16@0+ (0.001,0) [0|6553.5] "Volts" SLAVE
+    SG_ raw_batt24_cell4_voltage m19 : 16|16@0+ (0.001,0) [0|6553.5] "Volts" SLAVE
+    SG_ raw_batt25_cell1_voltage m19 : 0|16@0+ (0.001,0) [0|6553.5] "Volts" SLAVE
+    SG_ raw_batt25_cell2_voltage m22 : 32|16@0+ (0.001,0) [0|6553.5] "Volts" SLAVE
+    SG_ raw_batt25_cell3_voltage m22 : 16|16@0+ (0.001,0) [0|6553.5] "Volts" SLAVE
+    SG_ raw_batt25_cell4_voltage m22 : 0|16@0+ (0.001,0) [0|6553.5] "Volts" SLAVE
+    SG_ raw_batt26_cell1_voltage m25 : 32|16@0+ (0.001,0) [0|6553.5] "Volts" SLAVE
+    SG_ raw_batt26_cell2_voltage m25 : 16|16@0+ (0.001,0) [0|6553.5] "Volts" SLAVE
+    SG_ raw_batt26_cell3_voltage m25 : 0|16@0+ (0.001,0) [0|6553.5] "Volts" SLAVE
+    SG_ raw_batt26_cell4_voltage m28 : 32|16@0+ (0.001,0) [0|6553.5] "Volts" SLAVE
+
+BO_ 403830144 CELL_VOLTAGE_SLAVE4_FRAMES: 8 MASTER
+    SG_ raw_cell_voltage_frameid M : 8|8@1+ (1,0) [0|12] "" SLAVE
+    SG_ raw_batt27_cell1_voltage m1 : 32|16@0+ (0.001,0) [0|6553.5] "Volts" SLAVE
+    SG_ raw_batt27_cell2_voltage m1 : 16|16@0+ (0.001,0) [0|6553.5] "Volts" SLAVE
+    SG_ raw_batt27_cell3_voltage m1 : 0|16@0+ (0.001,0) [0|6553.5] "Volts" SLAVE
+    SG_ raw_batt27_cell4_voltage m4 : 32|16@0+ (0.001,0) [0|6553.5] "Volts" SLAVE
+    SG_ raw_batt28_cell1_voltage m4 : 16|16@0+ (0.001,0) [0|6553.5] "Volts" SLAVE
+    SG_ raw_batt28_cell2_voltage m4 : 0|16@0+ (0.001,0) [0|6553.5] "Volts" SLAVE
+    SG_ raw_batt28_cell3_voltage m7 : 32|16@0+ (0.001,0) [0|6553.5] "Volts" SLAVE
+    SG_ raw_batt28_cell4_voltage m7 : 16|16@0+ (0.001,0) [0|6553.5] "Volts" SLAVE
+    SG_ raw_batt29_cell1_voltage m7 : 0|16@0+ (0.001,0) [0|6553.5] "Volts" SLAVE
+    SG_ raw_batt29_cell2_voltage m10 : 32|16@0+ (0.001,0) [0|6553.5] "Volts" SLAVE
+    SG_ raw_batt29_cell3_voltage m10 : 16|16@0+ (0.001,0) [0|6553.5] "Volts" SLAVE
+    SG_ raw_batt29_cell4_voltage m10 : 0|16@0+ (0.001,0) [0|6553.5] "Volts" SLAVE
+    SG_ raw_batt30_cell1_voltage m13 : 32|16@0+ (0.001,0) [0|6553.5] "Volts" SLAVE
+    SG_ raw_batt30_cell2_voltage m13 : 16|16@0+ (0.001,0) [0|6553.5] "Volts" SLAVE
+    SG_ raw_batt30_cell3_voltage m13 : 0|16@0+ (0.001,0) [0|6553.5] "Volts" SLAVE
+    SG_ raw_batt30_cell4_voltage m16 : 32|16@0+ (0.001,0) [0|6553.5] "Volts" SLAVE
+    SG_ raw_batt31_cell1_voltage m16 : 16|16@0+ (0.001,0) [0|6553.5] "Volts" SLAVE
+    SG_ raw_batt31_cell2_voltage m16 : 0|16@0+ (0.001,0) [0|6553.5] "Volts" SLAVE
+    SG_ raw_batt31_cell3_voltage m19 : 32|16@0+ (0.001,0) [0|6553.5] "Volts" SLAVE
+    SG_ raw_batt31_cell4_voltage m19 : 16|16@0+ (0.001,0) [0|6553.5] "Volts" SLAVE
+    SG_ raw_batt32_cell1_voltage m19 : 0|16@0+ (0.001,0) [0|6553.5] "Volts" SLAVE
+    SG_ raw_batt32_cell2_voltage m22 : 32|16@0+ (0.001,0) [0|6553.5] "Volts" SLAVE
+    SG_ raw_batt32_cell3_voltage m22 : 16|16@0+ (0.001,0) [0|6553.5] "Volts" SLAVE
+    SG_ raw_batt32_cell4_voltage m22 : 0|16@0+ (0.001,0) [0|6553.5] "Volts" SLAVE
+    SG_ raw_batt33_cell1_voltage m25 : 32|16@0+ (0.001,0) [0|6553.5] "Volts" SLAVE
+    SG_ raw_batt33_cell2_voltage m25 : 16|16@0+ (0.001,0) [0|6553.5] "Volts" SLAVE
+    SG_ raw_batt33_cell3_voltage m25 : 0|16@0+ (0.001,0) [0|6553.5] "Volts" SLAVE
+    SG_ raw_batt33_cell4_voltage m28 : 32|16@0+ (0.001,0) [0|6553.5] "Volts" SLAVE
+    SG_ raw_batt34_cell1_voltage m28 : 16|16@0+ (0.001,0) [0|6553.5] "Volts" SLAVE
+    SG_ raw_batt34_cell2_voltage m28 : 0|16@0+ (0.001,0) [0|6553.5] "Volts" SLAVE
+    SG_ raw_batt34_cell3_voltage m31 : 32|16@0+ (0.001,0) [0|6553.5] "Volts" SLAVE
+    SG_ raw_batt34_cell4_voltage m31 : 16|16@0+ (0.001,0) [0|6553.5] "Volts" SLAVE
+    SG_ raw_batt35_cell1_voltage m31 : 0|16@0+ (0.001,0) [0|6553.5] "Volts" SLAVE
+    SG_ raw_batt35_cell2_voltage m34 : 32|16@0+ (0.001,0) [0|6553.5] "Volts" SLAVE
+    SG_ raw_batt35_cell3_voltage m34 : 16|16@0+ (0.001,0) [0|6553.5] "Volts" SLAVE
+    SG_ raw_batt35_cell4_voltage m34 : 0|16@0+ (0.001,0) [0|6553.5] "Volts" SLAVE
+    SG_ raw_batt36_cell1_voltage m37 : 32|16@0+ (0.001,0) [0|6553.5] "Volts" SLAVE
+    SG_ raw_batt36_cell2_voltage m37 : 16|16@0+ (0.001,0) [0|6553.5] "Volts" SLAVE
+    SG_ raw_batt36_cell3_voltage m37 : 0|16@0+ (0.001,0) [0|6553.5] "Volts" SLAVE
+    SG_ raw_batt36_cell4_voltage m40 : 32|16@0+ (0.001,0) [0|6553.5] "Volts" SLAVE
+    SG_ raw_batt37_cell1_voltage m40 : 16|16@0+ (0.001,0) [0|6553.5] "Volts" SLAVE
+    SG_ raw_batt37_cell2_voltage m40 : 0|16@0+ (0.001,0) [0|6553.5] "Volts" SLAVE
+    SG_ raw_batt37_cell3_voltage m43 : 32|16@0+ (0.001,0) [0|6553.5] "Volts" SLAVE
+    SG_ raw_batt37_cell4_voltage m43 : 16|16@0+ (0.001,0) [0|6553.5] "Volts" SLAVE
+    SG_ raw_batt38_cell1_voltage m43 : 0|16@0+ (0.001,0) [0|6553.5] "Volts" SLAVE
+    SG_ raw_batt38_cell2_voltage m46 : 32|16@0+ (0.001,0) [0|6553.5] "Volts" SLAVE
+    SG_ raw_batt38_cell3_voltage m46 : 16|16@0+ (0.001,0) [0|6553.5] "Volts" SLAVE
+    SG_ raw_batt38_cell4_voltage m46 : 0|16@0+ (0.001,0) [0|6553.5] "Volts" SLAVE
     
 BO_ 405927144 CELL_VOLTAGE_FRAMES: 8 MASTER
     SG_ raw_mb_voltage_frameid M : 8|8@1+ (1,0) [0|12] "" SLAVE
