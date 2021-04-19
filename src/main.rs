@@ -80,7 +80,7 @@ async fn main() -> Result<()> {
                           frame.id() == 0x1811f581 || 
                           frame.id() == 0x1811f582 ||
                           frame.id() == 0x1811f583 ||
-                          frame.id() == 0x1831f4e8 || {
+                          frame.id() == 0x1831f4e8 {
                         print_dbc_signals(signal_lookup, &frame, raw);
                     }
                 }
