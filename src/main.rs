@@ -75,12 +75,16 @@ async fn main() -> Result<()> {
         match socket_result {
             Ok(frame) => {
                 if let Some(signal_lookup) = signal_lookup.as_ref() {
-                    if (((frame.id() << 16) >> 16) == 0xCCE8) || 
-                          frame.id() == 0x1811f580 || 
-                          frame.id() == 0x1811f581 || 
-                          frame.id() == 0x1811f582 ||
-                          frame.id() == 0x1811f583 ||
-                          frame.id() == 0x1831f4e8 {
+                    if (((frame.id() << 16) >> 16) == 0xCCE8) ||
+                        frame.id() == 0x1811f580 ||
+                        frame.id() == 0x1811f581 ||
+                        frame.id() == 0x1811f582 ||
+                        frame.id() == 0x1811f583 ||
+                        frame.id() == 0x1831f4e8 ||
+                        frame.id() == 0x1832f4e8 ||
+                        frame.id() == 0x1834f4e8 ||
+                        frame.id() == 0x1835f4e8 ||
+                        frame.id() == 0x1838f4e8 {
                         print_dbc_signals(signal_lookup, &frame, raw);
                     }
                 }
@@ -96,14 +100,14 @@ async fn main() -> Result<()> {
 // Given a CAN Frame, lookup the can signals and print the signal values
 fn print_dbc_signals(signal_lookup: &HashMap<u32, (String, Vec<Signal>, &str)>, frame: &CANFrame, raw_data: bool) {
     let id = frame.id() & !socketcan::EFF_FLAG;
-    let arrlength = id.len();
+    // let arrlength = id.len();
     let (message_name, signals, _comment) = signal_lookup.get(&id).expect("Unknown message id");
     let message_name_s = format!("{:<30}", message_name);
     println!("\n{} Frame ID: {:08X}", Purple.paint(message_name_s), frame.id());
 
     for signal in signals.iter() {
-      
-        let frame_data: [u8; arrlength] = frame
+
+        let frame_data: [u8; 8] = frame
             .data()
             .try_into()
             .expect("slice with incorrect length");
