@@ -87,6 +87,7 @@ print_info	src/configs/systemvalues.rs	/^    fn print_info(&self) {$/;"	P	implem
 print_info	src/configs/systemvalues.rs	/^    fn print_info(&self) {$/;"	P	implementation:Overview
 print_info	src/configs/sysval.rs	/^    fn print_info(&self) {$/;"	P	implementation:NodeValue
 print_info	src/configs/sysval.rs	/^    fn print_info(&self) {$/;"	P	implementation:Overview
+raw_data	src/main.rs	/^    raw_data: bool,$/;"	m	struct:Opt
 read_frame	src/configs/systemvalues.rs	/^    fn read_frame($/;"	P	implementation:Overview
 read_frame	src/configs/sysval.rs	/^    fn read_frame($/;"	P	implementation:Overview
 state	src/configs/systemvalues.rs	/^    state: States,$/;"	m	struct:NodeValue

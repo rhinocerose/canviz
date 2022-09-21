@@ -42,11 +42,27 @@ BO_ 406768872 TEMP_VOLTAGE_FRAME: 8 MASTER
     SG_ temperature_max_mono : 48|8@1+ (1,-40) [-40|215] "Celcius" SLAVE
     SG_ temperature_min_mono : 56|8@1+ (1,-40) [-40|215] "Celcius" SLAVE
 
+CM_ BO_ 406768872 "Temp Voltage Frame 183ECCE8";
+CM_ SG_ 406768872 temperature_diode "Diode temperature";
+CM_ SG_ 406768872 temperature_contactor "Contactor temperature";
+CM_ SG_ 406768872 temperature_max_mono "Maximum monoblock temperature";
+CM_ SG_ 406768872 temperature_min_mono "Minimum monoblock temperature";
+CM_ SG_ 406768872 voltage_max_mono "Maximum monoblock voltage";
+CM_ SG_ 406768872 voltage_min_mono "Minimum monoblock voltage";
+
+
 BO_ 406899944 POWER_CURRENT: 8 MASTER
     SG_ power_instant : 0|16@0+ (0.1,-1600) [-1600|4953.5] "Watt-Hours" SLAVE
     SG_ power_cumulative : 48|16@0+ (0.1,-1600) [-1600|4953.5] "Watt-Hours" SLAVE
     SG_ current_hall : 16|16@0+ (0.1,-1600) [-1600|4953.5] "Amps" SLAVE
     SG_ current_shunt : 0|16@0+ (0.1,-1600) [-1600|4953.5] "Amps" SLAVE
+
+CM_ BO_ 406899944 "Power Current Frame 1840CCE8";
+CM_ SG_ 406899944 power_instant "Instant power";
+CM_ SG_ 406899944 power_cumulative "Cumulative power";
+CM_ SG_ 406899944 current_hall "Hall effect current";
+CM_ SG_ 406899944 current_shunt "Shunt current";
+
 
 BO_ 406834408 SOC_CURRENT: 8 MASTER
     SG_ state_current_num : 0|8@1+ (1,0) [0|7] "STATE" SLAVE
@@ -69,6 +85,13 @@ BO_ 406834408 SOC_CURRENT: 8 MASTER
     SG_ output_8 : 31|1@1+ (1,0) [0|0] "" SLAVE
     SG_ voltage_stack : 16|16@0+ (0.1,0) [0|6553.5] "Volts" SLAVE
     SG_ current_system : 0|16@0+ (0.1,-1600) [-1600|4953.5] "Amps" SLAVE
+
+CM_ BO_ 406834408 "SOC Current Frame 183FCCE8";
+CM_ SG_ 406834408 state_current_num "State - current number";
+CM_ SG_ 406834408 soc "SOC";
+CM_ SG_ 406834408 voltage_stack "Stack voltage - HV1";
+CM_ SG_ 406834408 current_system "System Current";
+
 
 BO_ 406637800 DEBUG_FRAME: 8 MASTER
     SG_ debug_frame_id M : 0|8@1+ (1,0) [0|0] "" SLAVE
@@ -181,27 +204,6 @@ BO_ 405916904 MONOBLOCK_TEMPERATURE_FRAMES: 8 MASTER
 
 BO_ 406375656 STATE_MACHINE_DEBUG_FRAMES: 8 MASTER
 BO_ 406703336 ERROR_FRAME: 8 MASTER
-
-
-CM_ BO_ 406768872 "Temp Voltage Frame 183ECCE8";
-CM_ SG_ 406768872 temperature_diode "Diode temperature";
-CM_ SG_ 406768872 temperature_contactor "Contactor temperature";
-CM_ SG_ 406768872 temperature_max_mono "Maximum monoblock temperature";
-CM_ SG_ 406768872 temperature_min_mono "Minimum monoblock temperature";
-CM_ SG_ 406768872 voltage_max_mono "Maximum monoblock voltage";
-CM_ SG_ 406768872 voltage_min_mono "Minimum monoblock voltage";
-
-CM_ BO_ 406899944 "Power Current Frame 1840CCE8";
-CM_ SG_ 406899944 power_instant "Instant power";
-CM_ SG_ 406899944 power_cumulative "Cumulative power";
-CM_ SG_ 406899944 current_hall "Hall effect current";
-CM_ SG_ 406899944 current_shunt "Shunt current";
-
-CM_ BO_ 406834408 "SOC Current Frame 183FCCE8";
-CM_ SG_ 406834408 state_current_num "State - current number";
-CM_ SG_ 406834408 soc "SOC";
-CM_ SG_ 406834408 voltage_stack "Stack voltage - HV1";
-CM_ SG_ 406834408 current_system "System Current";
 
 CM_ BO_ 405851368 "Our Frame 1";
 CM_ BO_ 405916904 "Our Frame 2";
