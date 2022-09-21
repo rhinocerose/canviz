@@ -34,7 +34,7 @@ NS_ :
 BS_:
 BU_: MASTER SLAVE
 
-BO_ 406768872 TEMP_VOLTAGE_FRAME: 8 MASTER
+BO_ 2554252520 TEMP_VOLTAGE_FRAME: 8 MASTER
     SG_ temperature_diode : 0|8@1+ (1,-40) [-40|215] "Celcius" SLAVE
     SG_ voltage_max_mono : 40|16@0+ (0.001,0) [0|65.535] "Volts" SLAVE
     SG_ voltage_min_mono : 24|16@0+ (0.001,0) [0|65.535] "Volts" SLAVE

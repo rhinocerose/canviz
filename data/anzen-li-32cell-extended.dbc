@@ -1,0 +1,387 @@
+VERSION ""
+
+
+NS_ :
+    NS_DESC_
+    CM_
+    BA_DEF_
+    BA_
+    VAL_
+    CAT_DEF_
+    CAT_
+    FILTER
+    BA_DEF_DEF_
+    EV_DATA_
+    ENVVAR_DATA_
+    SGTYPE_
+    SGTYPE_VAL_
+    BA_DEF_SGTYPE_
+    BA_SGTYPE_
+    SIG_TYPE_REF_
+    VAL_TABLE_
+    SIG_GROUP_
+    SIG_VALTYPE_
+    SIGTYPE_VALTYPE_
+    BO_TX_BU_
+    BA_DEF_REL_
+    BA_REL_
+    BA_DEF_DEF_REL_
+    BU_SG_REL_
+    BU_EV_REL_
+    BU_BO_REL_
+    SG_MUL_VAL_
+
+BS_:
+BU_: MASTER SLAVE
+
+
+BO_ 201457384 HEARTBEAT: 8 MASTER
+   SG_ heartbeat : 7|24@0+ (1,0) [0|0] "" SLAVE
+
+BO_ 201522920 PACK_INFO: 8 MASTER
+   SG_ pack_voltage : 7|24@0+ (0.01,0) [0|0] "Volts" SLAVE
+   SG_ pack_current : 31|24@0+ (0.01,-1600) [0|0] "Amps" SLAVE
+   SG_ max_charge_current : 55|16@0+ (0.1,0) [-1600|4953.5] "Amps" SLAVE
+
+BO_ 2553672936 MASTER_VALUES: 8 MASTER
+   SG_ multiplexer M : 0|8@1+ (1,0) [0|4] "" SLAVE
+   SG_ m800_temp m1 : 8|8@1+ (1,-40) [-40|215] "Celsius" SLAVE
+   SG_ hv1_voltage m1 : 23|16@0+ (0.1,0) [0|6553.5] "Volts" SLAVE
+   SG_ current1 m1 : 39|16@0+ (0.1,-1600) [-1600|4953.5] "Amps" SLAVE
+   SG_ system_soc m2 : 24|8@1+ (1,0) [0|100] "Percent" SLAVE
+   SG_ power_supply_voltage m2 : 39|16@0+ (0.1,0) [0|409.5] "Volts" SLAVE
+   SG_ hv2_voltage m2 : 55|16@0+ (0.1,0) [0|6553.5] "Volts" SLAVE
+   SG_ ntc0 m4 : 24|8@1+ (1,-40) [-40|215] "Celcius" SLAVE
+   SG_ ntc1 m4 : 32|8@1+ (1,-40) [-40|215] "Celcius" SLAVE
+   SG_ ntc2 m4 : 40|8@1+ (1,-40) [-40|215] "Celcius" SLAVE
+   SG_ ntc3 m4 : 48|8@1+ (1,-40) [-40|215] "Celcius" SLAVE
+   SG_ current3 m5 : 31|16@0+ (0.1,-1600) [-1600|4953.5] "Amps" SLAVE
+   SG_ current2 m5 : 15|16@0+ (0.1,-1600) [-1600|4953.5] "Amps" SLAVE
+
+BO_ 2553410792 CELL_VOLTAGE_FRAMES: 8 MASTER
+   SG_ cell_voltage_mux M : 0|8@1+ (1,0) [0|12] "" SLAVE
+   SG_ voltage_cell_001 m1 : 23|16@0+ (0.001,0) [0|6553.5] "Volts" SLAVE
+   SG_ voltage_cell_002 m1 : 39|16@0+ (0.001,0) [0|6553.5] "Volts" SLAVE
+   SG_ voltage_cell_003 m1 : 55|16@0+ (0.001,0) [0|6553.5] "Volts" SLAVE
+   SG_ voltage_cell_004 m2 : 23|16@0+ (0.001,0) [0|6553.5] "Volts" SLAVE
+   SG_ voltage_cell_005 m2 : 39|16@0+ (0.001,0) [0|6553.5] "Volts" SLAVE
+   SG_ voltage_cell_006 m2 : 55|16@0+ (0.001,0) [0|6553.5] "Volts" SLAVE
+   SG_ voltage_cell_007 m3 : 23|16@0+ (0.001,0) [0|6553.5] "Volts" SLAVE
+   SG_ voltage_cell_008 m3 : 39|16@0+ (0.001,0) [0|6553.5] "Volts" SLAVE
+   SG_ voltage_cell_009 m3 : 55|16@0+ (0.001,0) [0|6553.5] "Volts" SLAVE
+   SG_ voltage_cell_010 m4 : 23|16@0+ (0.001,0) [0|6553.5] "Volts" SLAVE
+   SG_ voltage_cell_011 m4 : 39|16@0+ (0.001,0) [0|6553.5] "Volts" SLAVE
+   SG_ voltage_cell_012 m4 : 55|16@0+ (0.001,0) [0|6553.5] "Volts" SLAVE
+   SG_ voltage_cell_013 m5 : 23|16@0+ (0.001,0) [0|6553.5] "Volts" SLAVE
+   SG_ voltage_cell_014 m5 : 39|16@0+ (0.001,0) [0|6553.5] "Volts" SLAVE
+   SG_ voltage_cell_015 m5 : 55|16@0+ (0.001,0) [0|6553.5] "Volts" SLAVE
+   SG_ voltage_cell_016 m6 : 23|16@0+ (0.001,0) [0|6553.5] "Volts" SLAVE
+   SG_ voltage_cell_017 m6 : 39|16@0+ (0.001,0) [0|6553.5] "Volts" SLAVE
+   SG_ voltage_cell_018 m6 : 55|16@0+ (0.001,0) [0|6553.5] "Volts" SLAVE
+   SG_ voltage_cell_019 m7 : 23|16@0+ (0.001,0) [0|6553.5] "Volts" SLAVE
+   SG_ voltage_cell_020 m7 : 39|16@0+ (0.001,0) [0|6553.5] "Volts" SLAVE
+   SG_ voltage_cell_021 m7 : 55|16@0+ (0.001,0) [0|6553.5] "Volts" SLAVE
+   SG_ voltage_cell_022 m8 : 23|16@0+ (0.001,0) [0|6553.5] "Volts" SLAVE
+   SG_ voltage_cell_023 m8 : 39|16@0+ (0.001,0) [0|6553.5] "Volts" SLAVE
+   SG_ voltage_cell_024 m8 : 55|16@0+ (0.001,0) [0|6553.5] "Volts" SLAVE
+   SG_ voltage_cell_025 m9 : 23|16@0+ (0.001,0) [0|6553.5] "Volts" SLAVE
+   SG_ voltage_cell_026 m9 : 39|16@0+ (0.001,0) [0|6553.5] "Volts" SLAVE
+   SG_ voltage_cell_027 m9 : 55|16@0+ (0.001,0) [0|6553.5] "Volts" SLAVE
+   SG_ voltage_cell_028 m10 : 23|16@0+ (0.001,0) [0|6553.5] "Volts" SLAVE
+   SG_ voltage_cell_029 m10 : 39|16@0+ (0.001,0) [0|6553.5] "Volts" SLAVE
+   SG_ voltage_cell_030 m10 : 55|16@0+ (0.001,0) [0|6553.5] "Volts" SLAVE
+   SG_ voltage_cell_031 m11 : 23|16@0+ (0.001,0) [0|6553.5] "Volts" SLAVE
+   SG_ voltage_cell_032 m11 : 39|16@0+ (0.001,0) [0|6553.5] "Volts" SLAVE
+   SG_ voltage_cell_033 m11 : 55|16@0+ (0.001,0) [0|6553.5] "Volts" SLAVE
+   SG_ voltage_cell_034 m12 : 23|16@0+ (0.001,0) [0|6553.5] "Volts" SLAVE
+   SG_ voltage_cell_035 m12 : 39|16@0+ (0.001,0) [0|6553.5] "Volts" SLAVE
+   SG_ voltage_cell_036 m12 : 55|16@0+ (0.001,0) [0|6553.5] "Volts" SLAVE
+   SG_ voltage_cell_037 m13 : 23|16@0+ (0.001,0) [0|6553.5] "Volts" SLAVE
+   SG_ voltage_cell_038 m13 : 39|16@0+ (0.001,0) [0|6553.5] "Volts" SLAVE
+   SG_ voltage_cell_039 m13 : 55|16@0+ (0.001,0) [0|6553.5] "Volts" SLAVE
+   SG_ voltage_cell_040 m14 : 23|16@0+ (0.001,0) [0|6553.5] "Volts" SLAVE
+   SG_ voltage_cell_041 m14 : 39|16@0+ (0.001,0) [0|6553.5] "Volts" SLAVE
+   SG_ voltage_cell_042 m14 : 55|16@0+ (0.001,0) [0|6553.5] "Volts" SLAVE
+   SG_ voltage_cell_043 m15 : 23|16@0+ (0.001,0) [0|6553.5] "Volts" SLAVE
+   SG_ voltage_cell_044 m15 : 39|16@0+ (0.001,0) [0|6553.5] "Volts" SLAVE
+   SG_ voltage_cell_045 m15 : 55|16@0+ (0.001,0) [0|6553.5] "Volts" SLAVE
+   SG_ voltage_cell_046 m16 : 23|16@0+ (0.001,0) [0|6553.5] "Volts" SLAVE
+   SG_ voltage_cell_047 m16 : 39|16@0+ (0.001,0) [0|6553.5] "Volts" SLAVE
+   SG_ voltage_cell_048 m16 : 55|16@0+ (0.001,0) [0|6553.5] "Volts" SLAVE
+
+BO_ 2553476328 CELL_TEMP_FRAMES: 8 MASTER
+   SG_ cell_temp_mux M : 0|8@1+ (1,0) [0|12] "" SLAVE
+   SG_ temp_cell_001 m1 : 16|8@1+ (1,-40) [-40|215] "Celcius" SLAVE
+   SG_ temp_cell_002 m1 : 24|8@1+ (1,-40) [-40|215] "Celcius" SLAVE
+   SG_ temp_cell_003 m1 : 32|8@1+ (1,-40) [-40|215] "Celcius" SLAVE
+   SG_ temp_cell_004 m1 : 40|8@1+ (1,-40) [-40|215] "Celcius" SLAVE
+   SG_ temp_cell_005 m1 : 48|8@1+ (1,-40) [-40|215] "Celcius" SLAVE
+   SG_ temp_cell_006 m1 : 56|8@1+ (1,-40) [-40|215] "Celcius" SLAVE
+   SG_ temp_cell_007 m2 : 16|8@1+ (1,-40) [-40|215] "Celcius" SLAVE
+   SG_ temp_cell_008 m2 : 24|8@1+ (1,-40) [-40|215] "Celcius" SLAVE
+   SG_ temp_cell_009 m2 : 32|8@1+ (1,-40) [-40|215] "Celcius" SLAVE
+   SG_ temp_cell_010 m2 : 40|8@1+ (1,-40) [-40|215] "Celcius" SLAVE
+   SG_ temp_cell_011 m2 : 48|8@1+ (1,-40) [-40|215] "Celcius" SLAVE
+   SG_ temp_cell_012 m2 : 56|8@1+ (1,-40) [-40|215] "Celcius" SLAVE
+   SG_ temp_cell_013 m3 : 16|8@1+ (1,-40) [-40|215] "Celcius" SLAVE
+   SG_ temp_cell_014 m3 : 24|8@1+ (1,-40) [-40|215] "Celcius" SLAVE
+   SG_ temp_cell_015 m3 : 32|8@1+ (1,-40) [-40|215] "Celcius" SLAVE
+   SG_ temp_cell_016 m3 : 40|8@1+ (1,-40) [-40|215] "Celcius" SLAVE
+   SG_ temp_cell_017 m3 : 48|8@1+ (1,-40) [-40|215] "Celcius" SLAVE
+   SG_ temp_cell_018 m3 : 56|8@1+ (1,-40) [-40|215] "Celcius" SLAVE
+   SG_ temp_cell_019 m4 : 16|8@1+ (1,-40) [-40|215] "Celcius" SLAVE
+   SG_ temp_cell_020 m4 : 24|8@1+ (1,-40) [-40|215] "Celcius" SLAVE
+   SG_ temp_cell_021 m4 : 32|8@1+ (1,-40) [-40|215] "Celcius" SLAVE
+   SG_ temp_cell_022 m4 : 40|8@1+ (1,-40) [-40|215] "Celcius" SLAVE
+   SG_ temp_cell_023 m4 : 48|8@1+ (1,-40) [-40|215] "Celcius" SLAVE
+   SG_ temp_cell_024 m4 : 56|8@1+ (1,-40) [-40|215] "Celcius" SLAVE
+   SG_ temp_cell_025 m5 : 16|8@1+ (1,-40) [-40|215] "Celcius" SLAVE
+   SG_ temp_cell_026 m5 : 24|8@1+ (1,-40) [-40|215] "Celcius" SLAVE
+   SG_ temp_cell_027 m5 : 32|8@1+ (1,-40) [-40|215] "Celcius" SLAVE
+   SG_ temp_cell_028 m5 : 40|8@1+ (1,-40) [-40|215] "Celcius" SLAVE
+   SG_ temp_cell_029 m5 : 48|8@1+ (1,-40) [-40|215] "Celcius" SLAVE
+   SG_ temp_cell_030 m5 : 56|8@1+ (1,-40) [-40|215] "Celcius" SLAVE
+   SG_ temp_cell_031 m6 : 16|8@1+ (1,-40) [-40|215] "Celcius" SLAVE
+   SG_ temp_cell_032 m6 : 24|8@1+ (1,-40) [-40|215] "Celcius" SLAVE
+   SG_ temp_cell_033 m6 : 32|8@1+ (1,-40) [-40|215] "Celcius" SLAVE
+   SG_ temp_cell_034 m6 : 40|8@1+ (1,-40) [-40|215] "Celcius" SLAVE
+   SG_ temp_cell_035 m6 : 48|8@1+ (1,-40) [-40|215] "Celcius" SLAVE
+   SG_ temp_cell_036 m6 : 56|8@1+ (1,-40) [-40|215] "Celcius" SLAVE
+   SG_ temp_cell_037 m7 : 16|8@1+ (1,-40) [-40|215] "Celcius" SLAVE
+   SG_ temp_cell_038 m7 : 24|8@1+ (1,-40) [-40|215] "Celcius" SLAVE
+   SG_ temp_cell_039 m7 : 32|8@1+ (1,-40) [-40|215] "Celcius" SLAVE
+   SG_ temp_cell_040 m7 : 40|8@1+ (1,-40) [-40|215] "Celcius" SLAVE
+   SG_ temp_cell_041 m7 : 48|8@1+ (1,-40) [-40|215] "Celcius" SLAVE
+   SG_ temp_cell_042 m7 : 56|8@1+ (1,-40) [-40|215] "Celcius" SLAVE
+   SG_ temp_cell_043 m8 : 16|8@1+ (1,-40) [-40|215] "Celcius" SLAVE
+   SG_ temp_cell_044 m8 : 24|8@1+ (1,-40) [-40|215] "Celcius" SLAVE
+   SG_ temp_cell_045 m8 : 32|8@1+ (1,-40) [-40|215] "Celcius" SLAVE
+   SG_ temp_cell_046 m8 : 40|8@1+ (1,-40) [-40|215] "Celcius" SLAVE
+   SG_ temp_cell_047 m8 : 48|8@1+ (1,-40) [-40|215] "Celcius" SLAVE
+   SG_ temp_cell_048 m8 : 56|8@1+ (1,-40) [-40|215] "Celcius" SLAVE
+
+BO_ 2553607400 CELL_SOH_FRAMES: 8 MASTER
+   SG_ cell_soh_mux M : 0|8@1+ (1,0) [0|12] "" SLAVE
+   SG_ soh_cell_001 m1 : 16|8@1+ (1,0) [0|100] "Percent" SLAVE
+   SG_ soh_cell_002 m1 : 24|8@1+ (1,0) [0|100] "Percent" SLAVE
+   SG_ soh_cell_003 m1 : 32|8@1+ (1,0) [0|100] "Percent" SLAVE
+   SG_ soh_cell_004 m1 : 40|8@1+ (1,0) [0|100] "Percent" SLAVE
+   SG_ soh_cell_005 m1 : 48|8@1+ (1,0) [0|100] "Percent" SLAVE
+   SG_ soh_cell_006 m1 : 56|8@1+ (1,0) [0|100] "Percent" SLAVE
+   SG_ soh_cell_007 m2 : 16|8@1+ (1,0) [0|100] "Percent" SLAVE
+   SG_ soh_cell_008 m2 : 24|8@1+ (1,0) [0|100] "Percent" SLAVE
+   SG_ soh_cell_009 m2 : 32|8@1+ (1,0) [0|100] "Percent" SLAVE
+   SG_ soh_cell_010 m2 : 40|8@1+ (1,0) [0|100] "Percent" SLAVE
+   SG_ soh_cell_011 m2 : 48|8@1+ (1,0) [0|100] "Percent" SLAVE
+   SG_ soh_cell_012 m2 : 56|8@1+ (1,0) [0|100] "Percent" SLAVE
+   SG_ soh_cell_013 m3 : 16|8@1+ (1,0) [0|100] "Percent" SLAVE
+   SG_ soh_cell_014 m3 : 24|8@1+ (1,0) [0|100] "Percent" SLAVE
+   SG_ soh_cell_015 m3 : 32|8@1+ (1,0) [0|100] "Percent" SLAVE
+   SG_ soh_cell_016 m3 : 40|8@1+ (1,0) [0|100] "Percent" SLAVE
+   SG_ soh_cell_017 m3 : 48|8@1+ (1,0) [0|100] "Percent" SLAVE
+   SG_ soh_cell_018 m3 : 56|8@1+ (1,0) [0|100] "Percent" SLAVE
+   SG_ soh_cell_019 m4 : 16|8@1+ (1,0) [0|100] "Percent" SLAVE
+   SG_ soh_cell_020 m4 : 24|8@1+ (1,0) [0|100] "Percent" SLAVE
+   SG_ soh_cell_021 m4 : 32|8@1+ (1,0) [0|100] "Percent" SLAVE
+   SG_ soh_cell_022 m4 : 40|8@1+ (1,0) [0|100] "Percent" SLAVE
+   SG_ soh_cell_023 m4 : 48|8@1+ (1,0) [0|100] "Percent" SLAVE
+   SG_ soh_cell_024 m4 : 56|8@1+ (1,0) [0|100] "Percent" SLAVE
+   SG_ soh_cell_025 m5 : 16|8@1+ (1,0) [0|100] "Percent" SLAVE
+   SG_ soh_cell_026 m5 : 24|8@1+ (1,0) [0|100] "Percent" SLAVE
+   SG_ soh_cell_027 m5 : 32|8@1+ (1,0) [0|100] "Percent" SLAVE
+   SG_ soh_cell_028 m5 : 40|8@1+ (1,0) [0|100] "Percent" SLAVE
+   SG_ soh_cell_029 m5 : 48|8@1+ (1,0) [0|100] "Percent" SLAVE
+   SG_ soh_cell_030 m5 : 56|8@1+ (1,0) [0|100] "Percent" SLAVE
+   SG_ soh_cell_031 m6 : 16|8@1+ (1,0) [0|100] "Percent" SLAVE
+   SG_ soh_cell_032 m6 : 24|8@1+ (1,0) [0|100] "Percent" SLAVE
+   SG_ soh_cell_033 m6 : 32|8@1+ (1,-40) [-40|215] "Celcius" SLAVE
+   SG_ soh_cell_034 m6 : 40|8@1+ (1,-40) [-40|215] "Celcius" SLAVE
+   SG_ soh_cell_035 m6 : 48|8@1+ (1,-40) [-40|215] "Celcius" SLAVE
+   SG_ soh_cell_036 m6 : 56|8@1+ (1,-40) [-40|215] "Celcius" SLAVE
+   SG_ soh_cell_037 m7 : 16|8@1+ (1,-40) [-40|215] "Celcius" SLAVE
+   SG_ soh_cell_038 m7 : 24|8@1+ (1,-40) [-40|215] "Celcius" SLAVE
+   SG_ soh_cell_039 m7 : 32|8@1+ (1,-40) [-40|215] "Celcius" SLAVE
+   SG_ soh_cell_040 m7 : 40|8@1+ (1,-40) [-40|215] "Celcius" SLAVE
+   SG_ soh_cell_041 m7 : 48|8@1+ (1,-40) [-40|215] "Celcius" SLAVE
+   SG_ soh_cell_042 m7 : 56|8@1+ (1,-40) [-40|215] "Celcius" SLAVE
+   SG_ soh_cell_043 m8 : 16|8@1+ (1,-40) [-40|215] "Celcius" SLAVE
+   SG_ soh_cell_044 m8 : 24|8@1+ (1,-40) [-40|215] "Celcius" SLAVE
+   SG_ soh_cell_045 m8 : 32|8@1+ (1,-40) [-40|215] "Celcius" SLAVE
+   SG_ soh_cell_046 m8 : 40|8@1+ (1,-40) [-40|215] "Celcius" SLAVE
+   SG_ soh_cell_047 m8 : 48|8@1+ (1,-40) [-40|215] "Celcius" SLAVE
+   SG_ soh_cell_048 m8 : 56|8@1+ (1,-40) [-40|215] "Celcius" SLAVE
+
+BO_ 2553541864 CELL_SOC_FRAMES: 8 MASTER
+   SG_ cell_soc_mux M : 0|8@1+ (1,0) [0|14] "" SLAVE
+   SG_ soc_cell_001 m1 : 16|8@1+ (1,0) [0|100] "Percent" SLAVE
+   SG_ soc_cell_002 m1 : 24|8@1+ (1,0) [0|100] "Percent" SLAVE
+   SG_ soc_cell_003 m1 : 32|8@1+ (1,0) [0|100] "Percent" SLAVE
+   SG_ soc_cell_004 m1 : 40|8@1+ (1,0) [0|100] "Percent" SLAVE
+   SG_ soc_cell_005 m1 : 48|8@1+ (1,0) [0|100] "Percent" SLAVE
+   SG_ soc_cell_006 m1 : 56|8@1+ (1,0) [0|100] "Percent" SLAVE
+   SG_ soc_cell_007 m2 : 16|8@1+ (1,0) [0|100] "Percent" SLAVE
+   SG_ soc_cell_008 m2 : 24|8@1+ (1,0) [0|100] "Percent" SLAVE
+   SG_ soc_cell_009 m2 : 32|8@1+ (1,0) [0|100] "Percent" SLAVE
+   SG_ soc_cell_010 m2 : 40|8@1+ (1,0) [0|100] "Percent" SLAVE
+   SG_ soc_cell_011 m2 : 48|8@1+ (1,0) [0|100] "Percent" SLAVE
+   SG_ soc_cell_012 m2 : 56|8@1+ (1,0) [0|100] "Percent" SLAVE
+   SG_ soc_cell_013 m3 : 16|8@1+ (1,0) [0|100] "Percent" SLAVE
+   SG_ soc_cell_014 m3 : 24|8@1+ (1,0) [0|100] "Percent" SLAVE
+   SG_ soc_cell_015 m3 : 32|8@1+ (1,0) [0|100] "Percent" SLAVE
+   SG_ soc_cell_016 m3 : 40|8@1+ (1,0) [0|100] "Percent" SLAVE
+   SG_ soc_cell_017 m3 : 48|8@1+ (1,0) [0|100] "Percent" SLAVE
+   SG_ soc_cell_018 m3 : 56|8@1+ (1,0) [0|100] "Percent" SLAVE
+   SG_ soc_cell_019 m4 : 16|8@1+ (1,0) [0|100] "Percent" SLAVE
+   SG_ soc_cell_020 m4 : 24|8@1+ (1,0) [0|100] "Percent" SLAVE
+   SG_ soc_cell_021 m4 : 32|8@1+ (1,0) [0|100] "Percent" SLAVE
+   SG_ soc_cell_022 m4 : 40|8@1+ (1,0) [0|100] "Percent" SLAVE
+   SG_ soc_cell_023 m4 : 48|8@1+ (1,0) [0|100] "Percent" SLAVE
+   SG_ soc_cell_024 m4 : 56|8@1+ (1,0) [0|100] "Percent" SLAVE
+   SG_ soc_cell_025 m5 : 16|8@1+ (1,0) [0|100] "Percent" SLAVE
+   SG_ soc_cell_026 m5 : 24|8@1+ (1,0) [0|100] "Percent" SLAVE
+   SG_ soc_cell_027 m5 : 32|8@1+ (1,0) [0|100] "Percent" SLAVE
+   SG_ soc_cell_028 m5 : 40|8@1+ (1,0) [0|100] "Percent" SLAVE
+   SG_ soc_cell_029 m5 : 48|8@1+ (1,0) [0|100] "Percent" SLAVE
+   SG_ soc_cell_030 m5 : 56|8@1+ (1,0) [0|100] "Percent" SLAVE
+   SG_ soc_cell_031 m6 : 16|8@1+ (1,0) [0|100] "Percent" SLAVE
+   SG_ soc_cell_032 m6 : 24|8@1+ (1,0) [0|100] "Percent" SLAVE
+   SG_ soc_cell_033 m6 : 32|8@1+ (1,-40) [-40|215] "Celcius" SLAVE
+   SG_ soc_cell_034 m6 : 40|8@1+ (1,-40) [-40|215] "Celcius" SLAVE
+   SG_ soc_cell_035 m6 : 48|8@1+ (1,-40) [-40|215] "Celcius" SLAVE
+   SG_ soc_cell_036 m6 : 56|8@1+ (1,-40) [-40|215] "Celcius" SLAVE
+   SG_ soc_cell_037 m7 : 16|8@1+ (1,-40) [-40|215] "Celcius" SLAVE
+   SG_ soc_cell_038 m7 : 24|8@1+ (1,-40) [-40|215] "Celcius" SLAVE
+   SG_ soc_cell_039 m7 : 32|8@1+ (1,-40) [-40|215] "Celcius" SLAVE
+   SG_ soc_cell_040 m7 : 40|8@1+ (1,-40) [-40|215] "Celcius" SLAVE
+   SG_ soc_cell_041 m7 : 48|8@1+ (1,-40) [-40|215] "Celcius" SLAVE
+   SG_ soc_cell_042 m7 : 56|8@1+ (1,-40) [-40|215] "Celcius" SLAVE
+   SG_ soc_cell_043 m8 : 16|8@1+ (1,-40) [-40|215] "Celcius" SLAVE
+   SG_ soc_cell_044 m8 : 24|8@1+ (1,-40) [-40|215] "Celcius" SLAVE
+   SG_ soc_cell_045 m8 : 32|8@1+ (1,-40) [-40|215] "Celcius" SLAVE
+   SG_ soc_cell_046 m8 : 40|8@1+ (1,-40) [-40|215] "Celcius" SLAVE
+   SG_ soc_cell_047 m8 : 48|8@1+ (1,-40) [-40|215] "Celcius" SLAVE
+   SG_ soc_cell_048 m8 : 56|8@1+ (1,-40) [-40|215] "Celcius" SLAVE
+
+BO_ 2553935080 MASTER_DIDO_CC_FRAMES: 8 MASTER
+   SG_ dido_mux M : 0|8@1+ (1,0) [0|14] "" SLAVE
+   SG_ master_DI1 m0 : 15|1@1+ (1,0) [0|1] "Binary" SLAVE
+   SG_ master_DI2 m0 : 14|1@1+ (1,0) [0|1] "Binary" SLAVE
+   SG_ master_DI3 m0 : 13|1@1+ (1,0) [0|1] "Binary" SLAVE
+   SG_ master_DI4 m0 : 12|1@1+ (1,0) [0|1] "Binary" SLAVE
+   SG_ master_DI5 m0 : 11|1@1+ (1,0) [0|1] "Binary" SLAVE
+   SG_ master_DI6 m0 : 10|1@1+ (1,0) [0|1] "Binary" SLAVE
+   SG_ master_DI7 m0 : 9|1@1+ (1,0) [0|1] "Binary" SLAVE
+   SG_ master_DI8 m0 : 8|1@1+ (1,0) [0|1] "Binary" SLAVE
+   SG_ master_DO1 m1 : 15|1@1+ (1,0) [0|1] "Binary" SLAVE
+   SG_ master_DO2 m1 : 14|1@1+ (1,0) [0|1] "Binary" SLAVE
+   SG_ master_DO3 m1 : 13|1@1+ (1,0) [0|1] "Binary" SLAVE
+   SG_ master_DO4 m1 : 12|1@1+ (1,0) [0|1] "Binary" SLAVE
+   SG_ master_DO5 m1 : 11|1@1+ (1,0) [0|1] "Binary" SLAVE
+   SG_ master_DO6 m1 : 10|1@1+ (1,0) [0|1] "Binary" SLAVE
+   SG_ master_DO7 m1 : 9|1@1+ (1,0) [0|1] "Binary" SLAVE
+   SG_ master_DO8 m1 : 8|1@1+ (1,0) [0|1] "Binary" SLAVE
+   SG_ cc_resistance_value m2 : 15|16@0+ (0.001,0) [0|255] "kiloOhms" SLAVE
+   SG_ cc2_resistance_value m2 : 31|16@0+ (0.001,0) [0|255] "kiloOhms" SLAVE
+   SG_ cp_voltage_value m3 : 32|8@1+ (0.1,0) [0|6553.5] "Volts" SLAVE
+   SG_ cp_duty_cycle m3 : 24|8@1+ (1,0) [0|100] "Percent" SLAVE
+   SG_ cp_frequency m3 : 15|16@0+ (1,0) [0|4095] "Hertz" SLAVE
+
+BO_ 2553738472 MIN_MAX_FRAMES: 8 MASTER
+   SG_ min_max_mux M : 0|8@1+ (1,0) [0|6] "" SLAVE
+   SG_ max_voltage_1 m1 : 23|16@0+ (0.001,0) [0|6553.5] "Volts" SLAVE
+   SG_ min_voltage_1 m2 : 23|16@0+ (0.001,0) [0|6553.5] "Volts" SLAVE
+
+BO_ 2553577717 SLAVE1_DI: 8 MASTER
+   SG_ slave_1_DI : 0|8@0+ (1,0) [0|1] "Binary" SLAVE
+
+BO_ 2553577973 SLAVE2_DI: 8 MASTER
+   SG_ slave_2_DI : 0|8@0+ (1,0) [0|1] "Binary" SLAVE
+
+BO_ 2551415029 SLAVE1_DO: 8 MASTER
+   SG_ slave1_DO1 : 0|8@0+ (1,0) [0|1] "Binary" SLAVE
+   SG_ slave1_DO2 : 0|8@0+ (1,0) [0|1] "Binary" SLAVE
+
+BO_ 2551415285 SLAVE2_DO: 8 MASTER
+   SG_ slave2_DO1 : 0|8@0+ (1,0) [0|1] "Binary" SLAVE
+   SG_ slave2_DO2 : 0|8@0+ (1,0) [0|1] "Binary" SLAVE
+
+BO_ 2553869544 ALARM_FRAMES: 8 MASTER
+   SG_ alarm_severity_mux M : 0|8@1+ (1,0) [0|4] "" SLAVE
+   SG_ feed_current_serious m1 : 8|1@1+ (1,0) [0|1] "Binary" SLAVE
+   SG_ slow_charge_serious m1 : 9|1@1+ (1,0) [0|1] "Binary" SLAVE
+   SG_ fast_charge_serious m1 : 10|1@1+ (1,0) [0|1] "Binary" SLAVE
+   SG_ pack_overvoltage_serious m1 : 11|1@1+ (1,0) [0|1] "Binary" SLAVE
+   SG_ pack_undervoltage_serious m1 : 12|1@1+ (1,0) [0|1] "Binary" SLAVE
+   SG_ module_overtemp_serious m1 : 13|1@1+ (1,0) [0|1] "Binary" SLAVE
+   SG_ psu_overvoltage_serious m1 : 14|1@1+ (1,0) [0|1] "Binary" SLAVE
+   SG_ psu_undervoltage_serious m1 : 15|1@1+ (1,0) [0|1] "Binary" SLAVE
+   SG_ charging_overtemp_serious m1 : 16|1@1+ (1,0) [0|1] "Binary" SLAVE
+   SG_ single_differential_serious m1 : 17|1@1+ (1,0) [0|1] "Binary" SLAVE
+   SG_ single_undervoltage_serious m1 : 18|1@1+ (1,0) [0|1] "Binary" SLAVE
+   SG_ single_overvoltage_serious m1 : 19|1@1+ (1,0) [0|1] "Binary" SLAVE
+   SG_ soc_high_serious m1 : 20|1@1+ (1,0) [0|1] "Binary" SLAVE
+   SG_ soc_low_serious m1 : 21|1@1+ (1,0) [0|1] "Binary" SLAVE
+   SG_ low_insulation_serious m1 : 22|1@1+ (1,0) [0|1] "Binary" SLAVE
+   SG_ discharge_overcurrent_serious m1 : 23|1@1+ (1,0) [0|1] "Binary" SLAVE
+   SG_ excessive_soc_serious m1 : 27|1@1+ (1,0) [0|1] "Binary" SLAVE
+   SG_ single_temperature_serious m1 : 28|1@1+ (1,0) [0|1] "Binary" SLAVE
+   SG_ discharging_undertemp_serious m1 : 29|1@1+ (1,0) [0|1] "Binary" SLAVE
+   SG_ discharging_overtemp_serious m1 : 30|1@1+ (1,0) [0|1] "Binary" SLAVE
+   SG_ charging_undertemp_serious m1 : 31|1@1+ (1,0) [0|1] "Binary" SLAVE
+   SG_ feed_current_general m2 : 8|1@1+ (1,0) [0|1] "Binary" SLAVE
+   SG_ slow_charge_general m2 : 9|1@1+ (1,0) [0|1] "Binary" SLAVE
+   SG_ fast_charge_general m2 : 10|1@1+ (1,0) [0|1] "Binary" SLAVE
+   SG_ pack_overvoltage_general m2 : 11|1@1+ (1,0) [0|1] "Binary" SLAVE
+   SG_ pack_undervoltage_general m2 : 12|1@1+ (1,0) [0|1] "Binary" SLAVE
+   SG_ module_overtemp_general m2 : 13|1@1+ (1,0) [0|1] "Binary" SLAVE
+   SG_ psu_overvoltage_general m2 : 14|1@1+ (1,0) [0|1] "Binary" SLAVE
+   SG_ psu_undervoltage_general m2 : 15|1@1+ (1,0) [0|1] "Binary" SLAVE
+   SG_ charging_overtemp_general m2 : 16|1@1+ (1,0) [0|1] "Binary" SLAVE
+   SG_ single_differential_general m2 : 17|1@1+ (1,0) [0|1] "Binary" SLAVE
+   SG_ single_undervoltage_general m2 : 18|1@1+ (1,0) [0|1] "Binary" SLAVE
+   SG_ single_overvoltage_general m2 : 19|1@1+ (1,0) [0|1] "Binary" SLAVE
+   SG_ soc_high_general m2 : 20|1@1+ (1,0) [0|1] "Binary" SLAVE
+   SG_ soc_low_general m2 : 21|1@1+ (1,0) [0|1] "Binary" SLAVE
+   SG_ low_insulation_general m2 : 22|1@1+ (1,0) [0|1] "Binary" SLAVE
+   SG_ discharge_overcurrent_general m2 : 23|1@1+ (1,0) [0|1] "Binary" SLAVE
+   SG_ excessive_soc_general m2 : 27|1@1+ (1,0) [0|1] "Binary" SLAVE
+   SG_ single_temperature_general m2 : 28|1@1+ (1,0) [0|1] "Binary" SLAVE
+   SG_ discharging_undertemp_general m2 : 29|1@1+ (1,0) [0|1] "Binary" SLAVE
+   SG_ discharging_overtemp_general m2 : 30|1@1+ (1,0) [0|1] "Binary" SLAVE
+   SG_ charging_undertemp_general m2 : 31|1@1+ (1,0) [0|1] "Binary" SLAVE
+   SG_ feed_current_slight m3 : 8|1@1+ (1,0) [0|1] "Binary" SLAVE
+   SG_ slow_charge_slight m3 : 9|1@1+ (1,0) [0|1] "Binary" SLAVE
+   SG_ fast_charge_slight m3 : 10|1@1+ (1,0) [0|1] "Binary" SLAVE
+   SG_ pack_overvoltage_slight m3 : 11|1@1+ (1,0) [0|1] "Binary" SLAVE
+   SG_ pack_undervoltage_slight m3 : 12|1@1+ (1,0) [0|1] "Binary" SLAVE
+   SG_ module_overtemp_slight m3 : 13|1@1+ (1,0) [0|1] "Binary" SLAVE
+   SG_ psu_overvoltage_slight m3 : 14|1@1+ (1,0) [0|1] "Binary" SLAVE
+   SG_ psu_undervoltage_slight m3 : 15|1@1+ (1,0) [0|1] "Binary" SLAVE
+   SG_ charging_overtemp_slight m3 : 16|1@1+ (1,0) [0|1] "Binary" SLAVE
+   SG_ single_differential_slight m3 : 17|1@1+ (1,0) [0|1] "Binary" SLAVE
+   SG_ single_undervoltage_slight m3 : 18|1@1+ (1,0) [0|1] "Binary" SLAVE
+   SG_ single_overvoltage_slight m3 : 19|1@1+ (1,0) [0|1] "Binary" SLAVE
+   SG_ soc_high_slight m3 : 20|1@1+ (1,0) [0|1] "Binary" SLAVE
+   SG_ soc_low_slight m3 : 21|1@1+ (1,0) [0|1] "Binary" SLAVE
+   SG_ low_insulation_slight m3 : 22|1@1+ (1,0) [0|1] "Binary" SLAVE
+   SG_ discharge_overcurrent_slight m3 : 23|1@1+ (1,0) [0|1] "Binary" SLAVE
+   SG_ excessive_soc_slight m3 : 27|1@1+ (1,0) [0|1] "Binary" SLAVE
+   SG_ single_temperature_slight m3 : 28|1@1+ (1,0) [0|1] "Binary" SLAVE
+   SG_ discharging_undertemp_slight m3 : 29|1@1+ (1,0) [0|1] "Binary" SLAVE
+   SG_ discharging_overtemp_slight m3 : 30|1@1+ (1,0) [0|1] "Binary" SLAVE
+   SG_ charging_undertemp_slight m3 : 31|1@1+ (1,0) [0|1] "Binary" SLAVE
+
+BA_DEF_ SG_ "SPN" INT 0 524287;
+BA_DEF_ SG_ "SigType" STRING ;
+BA_DEF_ BO_ "VFrameFormat" ENUM "StandardCAN","ExtendedCAN","reserved","J1939PG";
+BA_DEF_ BO_ "FilterLabel" INT 0 1;
+BA_DEF_ BO_ "matchingcriteria" INT 0 0;
+BA_DEF_ BO_ "GenMsgBackgroundColor" STRING ;
+BA_DEF_ BO_ "GenMsgForegroundColor" STRING ;
+BA_DEF_DEF_ "SPN" 0;
+BA_DEF_DEF_ "SigType" "";
+BA_DEF_DEF_ "VFrameFormat" "J1939PG";
+BA_DEF_DEF_ "FilterLabel" 1;
+BA_DEF_DEF_ "matchingcriteria" 1;
+BA_DEF_DEF_ "GenMsgBackgroundColor" "#ffffff";
+BA_DEF_DEF_ "GenMsgForegroundColor" "#000000";
