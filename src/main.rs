@@ -95,7 +95,10 @@ async fn main() -> Result<()> {
 }
 
 // Given a CAN Frame, lookup the can signals and print the signal values
-fn print_dbc_signals(signal_lookup: &HashMap<u32, (String, Vec<Signal>, &str)>, frame: &CANFrame, raw_data: bool) {
+fn print_dbc_signals (signal_lookup: &HashMap<u32, (String, Vec<Signal>, &str)>,
+                      frame: &CANFrame,
+                      raw_data: bool, ) {
+
     let id = frame.id() & !socketcan::EFF_FLAG;
     let (message_name, signals, _comment) = signal_lookup.get(&id).expect("Unknown message id");
     let message_name_s = format!("{:<30}", message_name);
@@ -103,10 +106,9 @@ fn print_dbc_signals(signal_lookup: &HashMap<u32, (String, Vec<Signal>, &str)>, 
 
     for signal in signals.iter() {
 
-        let frame_data: [u8; 8] = frame
-            .data()
-            .try_into()
-            .expect("slice with incorrect length");
+        let frame_data: [u8; 8] = frame.data()
+                                       .try_into()
+                                       .expect("slice with incorrect length");
 
         let signal_value: u64 = if *signal.byte_order() == ByteOrder::LittleEndian {
             u64::from_le_bytes(frame_data)
@@ -117,8 +119,8 @@ fn print_dbc_signals(signal_lookup: &HashMap<u32, (String, Vec<Signal>, &str)>, 
         // Calculate signal value
         let bit_mask: u64 = 2u64.pow(*signal.signal_size() as u32) - 1;
         let signal_value = ((signal_value >> signal.start_bit()) & bit_mask) as f32
-            * *signal.factor() as f32
-            + *signal.offset() as f32;
+                            * *signal.factor() as f32
+                            + *signal.offset() as f32;
 
         let signal_value_s = format!("{:6.2}", signal_value);
         let signal_name_s = format!("{:<30}", signal.name());
